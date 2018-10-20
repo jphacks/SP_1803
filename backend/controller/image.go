@@ -20,6 +20,7 @@ func PostImage(c *gin.Context) {
 		internalServgerErrorResponse(c, "get multipartform", err)
 		return
 	}
+	log.Println("form", form)
 
 	prop, err := getProp(form)
 	if err != nil {
@@ -34,6 +35,7 @@ func PostImage(c *gin.Context) {
 		return
 	}
 	log.Println("image", file)
+
 	if err = storageContext.CreateFile(name, *file); err != nil {
 		internalServgerErrorResponse(c, "create gcs file", err)
 		return
