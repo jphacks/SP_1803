@@ -11,7 +11,7 @@ import (
 )
 
 type Prop struct {
-	EmotionID string `json:"emotion_id"`
+	EmotionID int    `json:"emotion_id"`
 	Gender    string `json:"gender"`
 	CreatedAt string `json:"created_at"`
 }
