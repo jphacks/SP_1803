@@ -25,7 +25,7 @@ type DBContext struct {
 	Connection *sql.DB
 }
 
-func GetDBContext() (*DBContext, error) {
+func NewDBContext() (*DBContext, error) {
 	conn, err := sql.Open(DB_DRIVER, dbURI)
 	if err != nil {
 		return nil, err
