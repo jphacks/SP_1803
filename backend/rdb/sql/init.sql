@@ -17,3 +17,5 @@ insert into emotions (emotion_name) values ("かわいい");
 insert into emotions (emotion_name) values ("かっこいい");
 insert into emotions (emotion_name) values ("おもしろい");
 insert into emotions (emotion_name) values ("きもい");
+
+insert into images (image_url, gender, created_at, emotion_id) values ("https://pbs.twimg.com/profile_images/581025665727655936/9CnwZZ6j.jpg", "male", "2018-10-21 12:34:56", 1);

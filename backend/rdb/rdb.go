@@ -18,7 +18,7 @@ var (
 	pass  = os.Getenv("CLOUDSQL_PASSWORD")
 	host  = os.Getenv("CLOUDSQL_HOST")
 	db    = os.Getenv("CLOUD_DB")
-	dbURI = fmt.Sprintf("%s:%s@tcp(%s)/", user, pass, host)
+	dbURI = fmt.Sprintf("%s:%s@tcp(%s)/%s?parseTime=true", user, pass, host, db)
 )
 
 type DBContext struct {
