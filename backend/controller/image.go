@@ -4,14 +4,21 @@ import (
 	"encoding/json"
 	"log"
 	"mime/multipart"
+	"net/http"
 
 	"github.com/gin-gonic/gin"
+	"github.com/jphacks/SP_1803/backend/rdb"
 )
 
 type Prop struct {
 	EmotionID string `json:"emotion_id"`
 	Gender    string `json:"gender"`
 	CreatedAt string `json:"created_at"`
+}
+
+type Image struct {
+	ImageID  int    `json:"image_id"`
+	ImageURL string `json:"image_url"`
 }
 
 func PostImage(c *gin.Context) {
@@ -52,6 +59,21 @@ func PostImage(c *gin.Context) {
 	return
 }
 
+func ListImages(c *gin.Context) {
+	emoID := c.Query("emotion_id")
+	imageOpe := rdb.ImageOperator{
+		Connetion: dbContext.Connection,
+	}
+	images, err := imageOpe.Select(emoID)
+	if err != nil {
+		internalServgerErrorResponse(c, "cant get images", err)
+		return
+	}
+	vms := parseViewModelImage(images)
+	c.JSON(http.StatusOK, vms)
+	return
+}
+
 func getProp(form *multipart.Form) (*Prop, error) {
 	propString := form.Value["prop"][0]
 	var prop Prop
@@ -69,4 +91,16 @@ func getMultipartFile(form *multipart.Form) (*multipart.File, string, error) {
 		return nil, "", err
 	}
 	return &file, fileHeader.Filename, nil
+}
+
+func parseViewModelImage(dbImages *[]rdb.Image) *[]Image {
+	var vms []Image
+	for _, item := range *dbImages {
+		vm := Image{
+			ImageID:  item.ImageID,
+			ImageURL: item.ImageURL,
+		}
+		vms = append(vms, vm)
+	}
+	return &vms
 }
