@@ -19,9 +19,9 @@ final class ListPresenter {
     typealias View = ListProtocol & ListViewController
     private var state: loadStatus = .initial
     private weak var view: View?
-    private var contentsList: [SampleModel] = []
+    private var contentsList: [ImageListModel] = []
     
-    var numberOfSampleModel: Int {
+    var numberOfImageListModel: Int {
         return contentsList.count
     }
     
@@ -29,7 +29,7 @@ final class ListPresenter {
         self.view = view
     }
     
-    func sample(at index: Int) -> SampleModel? {
+    func imageList(at index: Int) -> ImageListModel? {
         guard index < contentsList.count else { return nil }
         return contentsList[index]
     }
@@ -45,30 +45,30 @@ final class ListPresenter {
         })
     }
     
-    func callPostSample() {
-        defer {
-            DispatchQueue.main.async {
-                self.view?.reloadFeed()
-            }
-        }
-        postSample(after: { str in
-            self.contentsList = str
-        },body: "hoge")
-    }
+//    func callPostSample() {
+//        defer {
+//            DispatchQueue.main.async {
+//                self.view?.reloadFeed()
+//            }
+//        }
+//        postSample(after: { str in
+//            self.contentsList = str
+//        },body: "hoge")
+//    }
     
     
-    private func getSample(after: @escaping ([SampleModel]) -> Void) {
+    private func getSample(after: @escaping ([ImageListModel]) -> Void) {
         guard state != .fetching else { return }
         state = .fetching
-        let someDictionary: [String: Any] = ["name": "bob"]
+        let someDictionary: [String: Any] = ["emotion_id": "0"]
         let queryBuilder: URLQueryBuilder = URLQueryBuilder(dictionary: someDictionary)
-        let api = ApiManager(path: "/get",queryString: queryBuilder.build())
+        let api = ApiManager(path: "/images",queryString: queryBuilder.build())
         api.request(
             success: {
                 (data: Data) in
                 print(data)
                 do {
-                    let contents = try JSONDecoder().decode([SampleModel].self, from: data)
+                    let contents = try JSONDecoder().decode([ImageListModel].self, from: data)
                     self.state = .success
                     after(contents)
                 } catch {
@@ -83,33 +83,33 @@ final class ListPresenter {
         
     }
     
-    private func postSample(after: @escaping ([SampleModel]) -> (), body: String) {
-        guard state != .fetching else { return }
-        state = .fetching
-        let parameters: [String: Any] = [
-            "name": body,
-            "email": body
-        ]
-        let api = ApiManager(path: "/post", method: .post, parameters: parameters, queryString: "")
-        api.request(
-            success: {
-                (data: Data) in
-                do {
-                    let contents = try JSONDecoder().decode([SampleModel].self, from: data)
-                    self.state = .success
-                    print(contents)
-                    after(contents)
-                } catch {
-                    self.state = .initial
-                    print(error)
-                }
-                
-        },
-            fail: {
-                (error: Error?) in print(error)
-                
-        }
-        )
-    }
+//    private func postSample(after: @escaping ([SampleModel]) -> (), body: String) {
+//        guard state != .fetching else { return }
+//        state = .fetching
+//        let parameters: [String: Any] = [
+//            "name": body,
+//            "email": body
+//        ]
+//        let api = ApiManager(path: "/post", method: .post, parameters: parameters, queryString: "")
+//        api.request(
+//            success: {
+//                (data: Data) in
+//                do {
+//                    let contents = try JSONDecoder().decode([SampleModel].self, from: data)
+//                    self.state = .success
+//                    print(contents)
+//                    after(contents)
+//                } catch {
+//                    self.state = .initial
+//                    print(error)
+//                }
+//
+//        },
+//            fail: {
+//                (error: Error?) in print(error)
+//
+//        }
+//        )
+//    }
     
 }

@@ -140,7 +140,7 @@ final class PreviewPresenter {
                 }
                 multipartFormData.append(imageData!, withName: "image", fileName: "bobfile.png", mimeType: "image/png")
         },
-            to: "http://private-e2787-kawai1.apiary-mock.com/images",
+            to: "http://35.221.98.97:8080/images",
             encodingCompletion: { encodingResult in debugPrint(encodingResult)
                 switch encodingResult {
                 case .success(let upload, _, _):

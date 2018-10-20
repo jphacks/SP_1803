@@ -27,6 +27,7 @@
 		DF873C69217B34C300135078 /* ListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF873C67217B34C300135078 /* ListCollectionViewCell.swift */; };
 		DF873C6A217B34C300135078 /* ListCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF873C68217B34C300135078 /* ListCollectionViewCell.xib */; };
 		DF873C6C217B37DC00135078 /* IMG_1895.JPG in Resources */ = {isa = PBXBuildFile; fileRef = DF873C6B217B37DC00135078 /* IMG_1895.JPG */; };
+		DF873C70217B655400135078 /* ImageListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF873C6F217B655400135078 /* ImageListModel.swift */; };
 		DF97EE05217AC01C00FE7DB3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF97EE04217AC01C00FE7DB3 /* AppDelegate.swift */; };
 		DF97EE0C217AC01D00FE7DB3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF97EE0B217AC01D00FE7DB3 /* Assets.xcassets */; };
 		DF97EE0F217AC01D00FE7DB3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF97EE0D217AC01D00FE7DB3 /* LaunchScreen.storyboard */; };
@@ -78,6 +79,7 @@
 		DF873C67217B34C300135078 /* ListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCollectionViewCell.swift; sourceTree = "<group>"; };
 		DF873C68217B34C300135078 /* ListCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListCollectionViewCell.xib; sourceTree = "<group>"; };
 		DF873C6B217B37DC00135078 /* IMG_1895.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_1895.JPG; sourceTree = "<group>"; };
+		DF873C6F217B655400135078 /* ImageListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageListModel.swift; sourceTree = "<group>"; };
 		DF97EE01217AC01C00FE7DB3 /* KAWAI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KAWAI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF97EE04217AC01C00FE7DB3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DF97EE0B217AC01D00FE7DB3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -159,6 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				DF873C50217AF48B00135078 /* Sample.swift */,
+				DF873C6F217B655400135078 /* ImageListModel.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -524,6 +527,7 @@
 				DF873C69217B34C300135078 /* ListCollectionViewCell.swift in Sources */,
 				DF873C65217B344300135078 /* ListPresenter.swift in Sources */,
 				DF873C40217AD00E00135078 /* ApiManager.swift in Sources */,
+				DF873C70217B655400135078 /* ImageListModel.swift in Sources */,
 				DF873C51217AF48B00135078 /* Sample.swift in Sources */,
 				DF97EE05217AC01C00FE7DB3 /* AppDelegate.swift in Sources */,
 				DF873C42217ADB2300135078 /* CreatemodelViewController.swift in Sources */,

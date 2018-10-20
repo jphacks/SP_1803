@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 protocol ListProtocol: class {
     func reloadFeed()
@@ -57,7 +58,7 @@ class ListViewController: UIViewController {
 extension ListViewController: ListProtocol {
     
     func reloadFeed() {
-        collectionView.reloadData()
+//        collectionView.reloadData()
     }
     
 }
@@ -87,6 +88,9 @@ extension ListViewController : UICollectionViewDataSource{
      */
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ListCollectionViewCell", for: indexPath) as! ListCollectionViewCell
+        
+//        let url = URL(string: presenter.imageList(at: indexPath.row)?.image_url ?? "") ?? URL(fileURLWithPath: "https://2.bp.blogspot.com/-2yBvnEiXxXw/W64DVKH5_7I/AAAAAAABPF8/jE45dYz1D4cmCl0Cq6yqfsmvogoAjOc8gCLcBGAs/s800/bentou_businesswoman_cry.png")
+//        cell.CardImage.kf.setImage(with: url)
         
         return cell
     }

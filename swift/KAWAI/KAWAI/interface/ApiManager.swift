@@ -16,7 +16,7 @@ enum loadStatus {
 }
 
 struct ApiManager {
-    private let host = "https://optimistic-tree-218815.appspot.com"
+    private let host = "http://35.221.98.97:8080"
     private let method: HTTPMethod
     private var parameters: Parameters?
     private var components = URLComponents()
@@ -28,8 +28,8 @@ struct ApiManager {
         }else {
             self.parameters = nil
         }
-        components.scheme = "https"
-        components.host = "optimistic-tree-218815.appspot.com"
+        components.scheme = "http"
+        components.host = "35.221.98.97:8080"
         components.query = queryString
         components.path = path
         //        components.port = 8080
