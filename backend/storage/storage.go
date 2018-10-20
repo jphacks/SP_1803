@@ -2,7 +2,8 @@ package storage
 
 import (
 	"context"
-	"log"
+	"io"
+	"io/ioutil"
 
 	"cloud.google.com/go/storage"
 )
@@ -12,7 +13,6 @@ const (
 )
 
 type StorageContext struct {
-	Client  *storage.Client
 	Bucket  *storage.BucketHandle
 	Context *context.Context
 }
@@ -25,13 +25,24 @@ func NewStorageContext() (*StorageContext, error) {
 	}
 	bck := cli.Bucket(BUCKET_NAME)
 	return &StorageContext{
-		Client:  cli,
 		Bucket:  bck,
 		Context: &ctx,
 	}, nil
 }
 
-func (s *StorageContext) CreateFile(fileName string) {
+func (s *StorageContext) CreateFile(fileName string, reader *io.Reader) error {
 	obj := s.Bucket.Object(fileName)
-	log.Println(obj)
+	buff, err := ioutil.ReadAll(*reader)
+	if err != nil {
+		return err
+	}
+
+	writer := obj.NewWriter(*s.Context)
+	if _, err := writer.Write(buff); err != nil {
+		return err
+	}
+	if err := writer.Close(); err != nil {
+		return err
+	}
+	return nil
 }
