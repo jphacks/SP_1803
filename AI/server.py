@@ -109,7 +109,8 @@ def hello():
     net.setInput(blob)
     outs = net.forward(getOutputsNames(net))
     postprocess(im, outs)
-    return jsonify(send_data)
+
+    return jsonify(result=send_data)
 
 
 if __name__ == '__main__':
