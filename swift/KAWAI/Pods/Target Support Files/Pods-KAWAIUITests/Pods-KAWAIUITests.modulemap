@@ -1,0 +1,6 @@
+framework module Pods_KAWAIUITests {
+  umbrella header "Pods-KAWAIUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

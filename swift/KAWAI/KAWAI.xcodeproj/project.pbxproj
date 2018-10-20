@@ -1,0 +1,768 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		052305675CABD7C4CB1181A4 /* Pods_KAWAI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8C9557B93F1B009920AF973 /* Pods_KAWAI.framework */; };
+		5787FCB067E5F1BAF18461E4 /* Pods_KAWAIUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D61BA6010BC5200EA192880D /* Pods_KAWAIUITests.framework */; };
+		66DD406FECDD29BCF05E35D7 /* Pods_KAWAITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C59B1B1B9742D20ED13315F4 /* Pods_KAWAITests.framework */; };
+		DF97EE05217AC01C00FE7DB3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF97EE04217AC01C00FE7DB3 /* AppDelegate.swift */; };
+		DF97EE07217AC01C00FE7DB3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF97EE06217AC01C00FE7DB3 /* ViewController.swift */; };
+		DF97EE0A217AC01C00FE7DB3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF97EE08217AC01C00FE7DB3 /* Main.storyboard */; };
+		DF97EE0C217AC01D00FE7DB3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF97EE0B217AC01D00FE7DB3 /* Assets.xcassets */; };
+		DF97EE0F217AC01D00FE7DB3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF97EE0D217AC01D00FE7DB3 /* LaunchScreen.storyboard */; };
+		DF97EE1A217AC01D00FE7DB3 /* KAWAITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF97EE19217AC01D00FE7DB3 /* KAWAITests.swift */; };
+		DF97EE25217AC01D00FE7DB3 /* KAWAIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF97EE24217AC01D00FE7DB3 /* KAWAIUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DF97EE16217AC01D00FE7DB3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DF97EDF9217AC01C00FE7DB3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DF97EE00217AC01C00FE7DB3;
+			remoteInfo = KAWAI;
+		};
+		DF97EE21217AC01D00FE7DB3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DF97EDF9217AC01C00FE7DB3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DF97EE00217AC01C00FE7DB3;
+			remoteInfo = KAWAI;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0B2CEE630D55ADBF7E67EB9B /* Pods-KAWAI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KAWAI.release.xcconfig"; path = "Pods/Target Support Files/Pods-KAWAI/Pods-KAWAI.release.xcconfig"; sourceTree = "<group>"; };
+		4DDA5107259B4494637CE769 /* Pods-KAWAIUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KAWAIUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KAWAIUITests/Pods-KAWAIUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		6AE4DE5440275DFCF867D782 /* Pods-KAWAIUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KAWAIUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-KAWAIUITests/Pods-KAWAIUITests.release.xcconfig"; sourceTree = "<group>"; };
+		7AFA0068450CCF5A912D82CF /* Pods-KAWAITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KAWAITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-KAWAITests/Pods-KAWAITests.release.xcconfig"; sourceTree = "<group>"; };
+		B0FD0F79BBC9C27786076EB0 /* Pods-KAWAI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KAWAI.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KAWAI/Pods-KAWAI.debug.xcconfig"; sourceTree = "<group>"; };
+		C2535B197D6AF42D6E362170 /* Pods-KAWAITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KAWAITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KAWAITests/Pods-KAWAITests.debug.xcconfig"; sourceTree = "<group>"; };
+		C59B1B1B9742D20ED13315F4 /* Pods_KAWAITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KAWAITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D61BA6010BC5200EA192880D /* Pods_KAWAIUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KAWAIUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D8C9557B93F1B009920AF973 /* Pods_KAWAI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KAWAI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF97EE01217AC01C00FE7DB3 /* KAWAI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KAWAI.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF97EE04217AC01C00FE7DB3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DF97EE06217AC01C00FE7DB3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DF97EE09217AC01C00FE7DB3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DF97EE0B217AC01D00FE7DB3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DF97EE0E217AC01D00FE7DB3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DF97EE10217AC01D00FE7DB3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DF97EE15217AC01D00FE7DB3 /* KAWAITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KAWAITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF97EE19217AC01D00FE7DB3 /* KAWAITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KAWAITests.swift; sourceTree = "<group>"; };
+		DF97EE1B217AC01D00FE7DB3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DF97EE20217AC01D00FE7DB3 /* KAWAIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KAWAIUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF97EE24217AC01D00FE7DB3 /* KAWAIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KAWAIUITests.swift; sourceTree = "<group>"; };
+		DF97EE26217AC01D00FE7DB3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DF97EDFE217AC01C00FE7DB3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				052305675CABD7C4CB1181A4 /* Pods_KAWAI.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DF97EE12217AC01D00FE7DB3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66DD406FECDD29BCF05E35D7 /* Pods_KAWAITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DF97EE1D217AC01D00FE7DB3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5787FCB067E5F1BAF18461E4 /* Pods_KAWAIUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B5459A4667D03F266171A6C2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D8C9557B93F1B009920AF973 /* Pods_KAWAI.framework */,
+				C59B1B1B9742D20ED13315F4 /* Pods_KAWAITests.framework */,
+				D61BA6010BC5200EA192880D /* Pods_KAWAIUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BBF447076BE0DE8633168D0F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B0FD0F79BBC9C27786076EB0 /* Pods-KAWAI.debug.xcconfig */,
+				0B2CEE630D55ADBF7E67EB9B /* Pods-KAWAI.release.xcconfig */,
+				C2535B197D6AF42D6E362170 /* Pods-KAWAITests.debug.xcconfig */,
+				7AFA0068450CCF5A912D82CF /* Pods-KAWAITests.release.xcconfig */,
+				4DDA5107259B4494637CE769 /* Pods-KAWAIUITests.debug.xcconfig */,
+				6AE4DE5440275DFCF867D782 /* Pods-KAWAIUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		DF97EDF8217AC01C00FE7DB3 = {
+			isa = PBXGroup;
+			children = (
+				DF97EE03217AC01C00FE7DB3 /* KAWAI */,
+				DF97EE18217AC01D00FE7DB3 /* KAWAITests */,
+				DF97EE23217AC01D00FE7DB3 /* KAWAIUITests */,
+				DF97EE02217AC01C00FE7DB3 /* Products */,
+				BBF447076BE0DE8633168D0F /* Pods */,
+				B5459A4667D03F266171A6C2 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		DF97EE02217AC01C00FE7DB3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DF97EE01217AC01C00FE7DB3 /* KAWAI.app */,
+				DF97EE15217AC01D00FE7DB3 /* KAWAITests.xctest */,
+				DF97EE20217AC01D00FE7DB3 /* KAWAIUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DF97EE03217AC01C00FE7DB3 /* KAWAI */ = {
+			isa = PBXGroup;
+			children = (
+				DF97EE35217AC0A900FE7DB3 /* checkkawai */,
+				DF97EE34217AC08400FE7DB3 /* createmodel */,
+				DF97EE33217AC06D00FE7DB3 /* interface */,
+				DF97EE32217AC06000FE7DB3 /* model */,
+				DF97EE04217AC01C00FE7DB3 /* AppDelegate.swift */,
+				DF97EE06217AC01C00FE7DB3 /* ViewController.swift */,
+				DF97EE08217AC01C00FE7DB3 /* Main.storyboard */,
+				DF97EE0B217AC01D00FE7DB3 /* Assets.xcassets */,
+				DF97EE0D217AC01D00FE7DB3 /* LaunchScreen.storyboard */,
+				DF97EE10217AC01D00FE7DB3 /* Info.plist */,
+			);
+			path = KAWAI;
+			sourceTree = "<group>";
+		};
+		DF97EE18217AC01D00FE7DB3 /* KAWAITests */ = {
+			isa = PBXGroup;
+			children = (
+				DF97EE19217AC01D00FE7DB3 /* KAWAITests.swift */,
+				DF97EE1B217AC01D00FE7DB3 /* Info.plist */,
+			);
+			path = KAWAITests;
+			sourceTree = "<group>";
+		};
+		DF97EE23217AC01D00FE7DB3 /* KAWAIUITests */ = {
+			isa = PBXGroup;
+			children = (
+				DF97EE24217AC01D00FE7DB3 /* KAWAIUITests.swift */,
+				DF97EE26217AC01D00FE7DB3 /* Info.plist */,
+			);
+			path = KAWAIUITests;
+			sourceTree = "<group>";
+		};
+		DF97EE32217AC06000FE7DB3 /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		DF97EE33217AC06D00FE7DB3 /* interface */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = interface;
+			sourceTree = "<group>";
+		};
+		DF97EE34217AC08400FE7DB3 /* createmodel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = createmodel;
+			sourceTree = "<group>";
+		};
+		DF97EE35217AC0A900FE7DB3 /* checkkawai */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = checkkawai;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DF97EE00217AC01C00FE7DB3 /* KAWAI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DF97EE29217AC01D00FE7DB3 /* Build configuration list for PBXNativeTarget "KAWAI" */;
+			buildPhases = (
+				244F4F10A923C00148B4A8FA /* [CP] Check Pods Manifest.lock */,
+				DF97EDFD217AC01C00FE7DB3 /* Sources */,
+				DF97EDFE217AC01C00FE7DB3 /* Frameworks */,
+				DF97EDFF217AC01C00FE7DB3 /* Resources */,
+				44C33C066D8C9B0D060AD681 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KAWAI;
+			productName = KAWAI;
+			productReference = DF97EE01217AC01C00FE7DB3 /* KAWAI.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DF97EE14217AC01D00FE7DB3 /* KAWAITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DF97EE2C217AC01D00FE7DB3 /* Build configuration list for PBXNativeTarget "KAWAITests" */;
+			buildPhases = (
+				E9B5AA20B6645C3170BAC11A /* [CP] Check Pods Manifest.lock */,
+				DF97EE11217AC01D00FE7DB3 /* Sources */,
+				DF97EE12217AC01D00FE7DB3 /* Frameworks */,
+				DF97EE13217AC01D00FE7DB3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DF97EE17217AC01D00FE7DB3 /* PBXTargetDependency */,
+			);
+			name = KAWAITests;
+			productName = KAWAITests;
+			productReference = DF97EE15217AC01D00FE7DB3 /* KAWAITests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		DF97EE1F217AC01D00FE7DB3 /* KAWAIUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DF97EE2F217AC01D00FE7DB3 /* Build configuration list for PBXNativeTarget "KAWAIUITests" */;
+			buildPhases = (
+				14AA97C92C7F10A4224D2EA8 /* [CP] Check Pods Manifest.lock */,
+				DF97EE1C217AC01D00FE7DB3 /* Sources */,
+				DF97EE1D217AC01D00FE7DB3 /* Frameworks */,
+				DF97EE1E217AC01D00FE7DB3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DF97EE22217AC01D00FE7DB3 /* PBXTargetDependency */,
+			);
+			name = KAWAIUITests;
+			productName = KAWAIUITests;
+			productReference = DF97EE20217AC01D00FE7DB3 /* KAWAIUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DF97EDF9217AC01C00FE7DB3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1000;
+				LastUpgradeCheck = 1000;
+				ORGANIZATIONNAME = "恵庭艦隊トシキング";
+				TargetAttributes = {
+					DF97EE00217AC01C00FE7DB3 = {
+						CreatedOnToolsVersion = 10.0;
+					};
+					DF97EE14217AC01D00FE7DB3 = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = DF97EE00217AC01C00FE7DB3;
+					};
+					DF97EE1F217AC01D00FE7DB3 = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = DF97EE00217AC01C00FE7DB3;
+					};
+				};
+			};
+			buildConfigurationList = DF97EDFC217AC01C00FE7DB3 /* Build configuration list for PBXProject "KAWAI" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DF97EDF8217AC01C00FE7DB3;
+			productRefGroup = DF97EE02217AC01C00FE7DB3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DF97EE00217AC01C00FE7DB3 /* KAWAI */,
+				DF97EE14217AC01D00FE7DB3 /* KAWAITests */,
+				DF97EE1F217AC01D00FE7DB3 /* KAWAIUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DF97EDFF217AC01C00FE7DB3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF97EE0F217AC01D00FE7DB3 /* LaunchScreen.storyboard in Resources */,
+				DF97EE0C217AC01D00FE7DB3 /* Assets.xcassets in Resources */,
+				DF97EE0A217AC01C00FE7DB3 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DF97EE13217AC01D00FE7DB3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DF97EE1E217AC01D00FE7DB3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		14AA97C92C7F10A4224D2EA8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KAWAIUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		244F4F10A923C00148B4A8FA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KAWAI-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		44C33C066D8C9B0D060AD681 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-KAWAI/Pods-KAWAI-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Hero/Hero.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Hero.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KAWAI/Pods-KAWAI-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E9B5AA20B6645C3170BAC11A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KAWAITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DF97EDFD217AC01C00FE7DB3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF97EE07217AC01C00FE7DB3 /* ViewController.swift in Sources */,
+				DF97EE05217AC01C00FE7DB3 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DF97EE11217AC01D00FE7DB3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF97EE1A217AC01D00FE7DB3 /* KAWAITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DF97EE1C217AC01D00FE7DB3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF97EE25217AC01D00FE7DB3 /* KAWAIUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DF97EE17217AC01D00FE7DB3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DF97EE00217AC01C00FE7DB3 /* KAWAI */;
+			targetProxy = DF97EE16217AC01D00FE7DB3 /* PBXContainerItemProxy */;
+		};
+		DF97EE22217AC01D00FE7DB3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DF97EE00217AC01C00FE7DB3 /* KAWAI */;
+			targetProxy = DF97EE21217AC01D00FE7DB3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DF97EE08217AC01C00FE7DB3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DF97EE09217AC01C00FE7DB3 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DF97EE0D217AC01D00FE7DB3 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DF97EE0E217AC01D00FE7DB3 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DF97EE27217AC01D00FE7DB3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		DF97EE28217AC01D00FE7DB3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DF97EE2A217AC01D00FE7DB3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B0FD0F79BBC9C27786076EB0 /* Pods-KAWAI.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 634QW7RT8Y;
+				INFOPLIST_FILE = KAWAI/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = TOSHIKING.KAWAI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DF97EE2B217AC01D00FE7DB3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0B2CEE630D55ADBF7E67EB9B /* Pods-KAWAI.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 634QW7RT8Y;
+				INFOPLIST_FILE = KAWAI/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = TOSHIKING.KAWAI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		DF97EE2D217AC01D00FE7DB3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C2535B197D6AF42D6E362170 /* Pods-KAWAITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 634QW7RT8Y;
+				INFOPLIST_FILE = KAWAITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = TOSHIKING.KAWAITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KAWAI.app/KAWAI";
+			};
+			name = Debug;
+		};
+		DF97EE2E217AC01D00FE7DB3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7AFA0068450CCF5A912D82CF /* Pods-KAWAITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 634QW7RT8Y;
+				INFOPLIST_FILE = KAWAITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = TOSHIKING.KAWAITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KAWAI.app/KAWAI";
+			};
+			name = Release;
+		};
+		DF97EE30217AC01D00FE7DB3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4DDA5107259B4494637CE769 /* Pods-KAWAIUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 634QW7RT8Y;
+				INFOPLIST_FILE = KAWAIUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = TOSHIKING.KAWAIUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = KAWAI;
+			};
+			name = Debug;
+		};
+		DF97EE31217AC01D00FE7DB3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6AE4DE5440275DFCF867D782 /* Pods-KAWAIUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 634QW7RT8Y;
+				INFOPLIST_FILE = KAWAIUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = TOSHIKING.KAWAIUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = KAWAI;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DF97EDFC217AC01C00FE7DB3 /* Build configuration list for PBXProject "KAWAI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DF97EE27217AC01D00FE7DB3 /* Debug */,
+				DF97EE28217AC01D00FE7DB3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DF97EE29217AC01D00FE7DB3 /* Build configuration list for PBXNativeTarget "KAWAI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DF97EE2A217AC01D00FE7DB3 /* Debug */,
+				DF97EE2B217AC01D00FE7DB3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DF97EE2C217AC01D00FE7DB3 /* Build configuration list for PBXNativeTarget "KAWAITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DF97EE2D217AC01D00FE7DB3 /* Debug */,
+				DF97EE2E217AC01D00FE7DB3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DF97EE2F217AC01D00FE7DB3 /* Build configuration list for PBXNativeTarget "KAWAIUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DF97EE30217AC01D00FE7DB3 /* Debug */,
+				DF97EE31217AC01D00FE7DB3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DF97EDF9217AC01C00FE7DB3 /* Project object */;
+}
