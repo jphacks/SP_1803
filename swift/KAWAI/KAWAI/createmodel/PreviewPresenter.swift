@@ -10,9 +10,10 @@ import Foundation
 import URLQueryBuilder
 import Alamofire
 
-struct SampleModel: Codable {
+struct ImageCreateModel: Codable {
     let user_id: Int
     let emotion_id: Int
+    let gender: String
     let created_at: String
 }
 
@@ -21,7 +22,11 @@ final class PreviewPresenter {
     typealias View = PreviewProtocol & PreviewViewController
     private var state: loadStatus = .initial
     private weak var view: View?
-    private var contentsList: [SampleModel] = []
+    private var contentsList: [ImageCreateModel] = []
+    
+    
+    private var components = URLComponents()
+    private let host = "http://35.221.98.97"
     
     var numberOfSampleModel: Int {
         return contentsList.count
@@ -31,7 +36,7 @@ final class PreviewPresenter {
         self.view = view
     }
     
-    func sample(at index: Int) -> SampleModel? {
+    func sample(at index: Int) -> ImageCreateModel? {
         guard index < contentsList.count else { return nil }
         return contentsList[index]
     }
@@ -59,7 +64,7 @@ final class PreviewPresenter {
     }
     
     
-    private func getSample(after: @escaping ([SampleModel]) -> Void) {
+    private func getSample(after: @escaping ([ImageCreateModel]) -> Void) {
         guard state != .fetching else { return }
         state = .fetching
         let someDictionary: [String: Any] = ["name": "bob"]
@@ -70,7 +75,7 @@ final class PreviewPresenter {
                 (data: Data) in
                 print(data)
                 do {
-                    let contents = try JSONDecoder().decode([SampleModel].self, from: data)
+                    let contents = try JSONDecoder().decode([ImageCreateModel].self, from: data)
                     self.state = .success
                     after(contents)
                 } catch {
@@ -85,7 +90,7 @@ final class PreviewPresenter {
         
     }
     
-    private func postSample(after: @escaping ([SampleModel]) -> (), body: String) {
+    private func postSample(after: @escaping ([ImageCreateModel]) -> (), body: String) {
         guard state != .fetching else { return }
         state = .fetching
         let parameters: [String: Any] = [
@@ -97,7 +102,7 @@ final class PreviewPresenter {
             success: {
                 (data: Data) in
                 do {
-                    let contents = try JSONDecoder().decode([SampleModel].self, from: data)
+                    let contents = try JSONDecoder().decode([ImageCreateModel].self, from: data)
                     self.state = .success
                     print(contents)
                     after(contents)
@@ -116,6 +121,12 @@ final class PreviewPresenter {
     
     func postImage(postImage: UIImage?, emotion_id: Int) {
         
+        components.scheme = "http"
+        components.host = "35.221.98.97"
+        components.path = "/images"
+        components.port = 8080
+        
+        print(components.url)
         // 現在時刻を取得
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
@@ -125,7 +136,7 @@ final class PreviewPresenter {
         let imageData = postImage?.pngData()
         
         // 送るmodel
-        let record = SampleModel(user_id: 0, emotion_id: emotion_id, created_at: displayTime)
+        let record = ImageCreateModel(user_id: 0, emotion_id: emotion_id, gender: "male", created_at: displayTime)
         
         Alamofire.upload(
             multipartFormData: { multipartFormData in
@@ -140,8 +151,8 @@ final class PreviewPresenter {
                 }
                 multipartFormData.append(imageData!, withName: "image", fileName: "bobfile.png", mimeType: "image/png")
         },
-            to: "http://private-e2787-kawai1.apiary-mock.com/images",
-            encodingCompletion: { encodingResult in debugPrint(encodingResult)
+            to: components.url ?? host,
+            encodingCompletion: { encodingResult in //debugPrint(encodingResult)
                 switch encodingResult {
                 case .success(let upload, _, _):
                     upload.responseJSON { response in

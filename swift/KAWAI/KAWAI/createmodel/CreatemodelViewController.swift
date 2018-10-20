@@ -41,8 +41,8 @@ class CreatemodelViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         captureSession.startRunning()
-        styleCaptureButton()
-        maskView.layer.borderColor = UIColor.red.cgColor
+//        styleCaptureButton()
+        maskView.layer.borderColor = UIColor.yellow.cgColor
         maskView.layer.borderWidth = 10
     }
     
