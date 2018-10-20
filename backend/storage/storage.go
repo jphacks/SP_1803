@@ -4,12 +4,19 @@ import (
 	"context"
 	"io"
 	"io/ioutil"
+	"os"
+	"time"
 
 	"cloud.google.com/go/storage"
 )
 
 const (
 	BUCKET_NAME = "kawai-storage"
+	DEVELOPER   = "782882692435-compute@developer.gserviceaccount.com"
+)
+
+var (
+	keyPath = os.Getenv("CLOUD_STORAGE_KEY_PATH")
 )
 
 type StorageContext struct {
@@ -45,4 +52,21 @@ func (s *StorageContext) CreateFile(fileName string, reader io.Reader) error {
 		return err
 	}
 	return nil
+}
+
+func (s *StorageContext) GetURL(fileName string) (string, error) {
+	pkey, err := ioutil.ReadFile(keyPath)
+	if err != nil {
+		return "", err
+	}
+	url, err := storage.SignedURL(BUCKET_NAME, fileName, &storage.SignedURLOptions{
+		GoogleAccessID: DEVELOPER,
+		PrivateKey:     pkey,
+		Method:         "GET",
+		Expires:        time.Now().Add(48 * time.Hour),
+	})
+	if err != nil {
+		return "", err
+	}
+	return url, nil
 }

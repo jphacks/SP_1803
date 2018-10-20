@@ -41,6 +41,13 @@ func PostImage(c *gin.Context) {
 		return
 	}
 
+	url, err := storageContext.GetURL(name)
+	if err != nil {
+		internalServgerErrorResponse(c, "get file url", err)
+		return
+	}
+	log.Println("url", url)
+
 	okResponse(c, "done create image file on GCS")
 	return
 }
