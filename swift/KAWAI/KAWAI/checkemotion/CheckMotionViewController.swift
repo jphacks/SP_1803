@@ -59,8 +59,31 @@ class CheckMotionViewController: UIViewController {
         setUpCamera()
         
         frameCapturingStartTime = CACurrentMediaTime()
+        
+        var myImageView: UIImage!
+        myImageView = getImage(videoPreview)
     }
     
+    func getImage(_ view : UIView) -> UIImage {
+        
+        // キャプチャする範囲を取得する
+        let rect = view.bounds
+        
+        // ビットマップ画像のcontextを作成する
+        UIGraphicsBeginImageContextWithOptions(rect.size, false, 0.0)
+        let context : CGContext = UIGraphicsGetCurrentContext()!
+        
+        // view内の描画をcontextに複写する
+        view.layer.render(in: context)
+        
+        // contextのビットマップをUIImageとして取得する
+        let image : UIImage = UIGraphicsGetImageFromCurrentImageContext()!
+        
+        // contextを閉じる
+        UIGraphicsEndImageContext()
+        
+        return image
+    }
     
     func setUpBoundingBoxes() {
         for _ in 0..<YOLO.maxBoundingBoxes {

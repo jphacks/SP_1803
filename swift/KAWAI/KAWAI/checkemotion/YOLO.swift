@@ -131,6 +131,11 @@ class YOLO {
                         let rect = CGRect(x: CGFloat(x - w/2), y: CGFloat(y - h/2),
                                           width: CGFloat(w), height: CGFloat(h))
                         
+                        //枠の位置はこれ!
+                        //print(rect)
+                        //xはこれ
+                        //print(CGFloat(x-w/2))
+                        
                         let prediction = Prediction(classIndex: detectedClass,
                                                     score: confidenceInClass,
                                                     rect: rect)
