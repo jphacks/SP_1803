@@ -9,6 +9,7 @@ target 'KAWAI' do
   pod 'Alamofire'
   pod 'Kingfisher'
   pod 'Hero'
+  pod 'PageMenu'
 
 
   target 'KAWAITests' do
