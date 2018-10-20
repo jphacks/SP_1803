@@ -2,10 +2,12 @@ package main
 
 import (
 	"bytes"
+	"context"
 	"fmt"
 	"log"
 	"net/http"
 
+	"cloud.google.com/go/storage"
 	"github.com/gin-gonic/gin"
 	"github.com/jphacks/SP_1803/backend/rdb"
 )
@@ -16,6 +18,7 @@ func main() {
 		c.Status(http.StatusOK)
 	})
 	app.GET("/db", handler)
+	app.GET("/storage", storagehander)
 	app.Run()
 }
 
@@ -45,4 +48,34 @@ func handler(c *gin.Context) {
 		fmt.Fprintf(buf, "- %s\n", dbName)
 	}
 	c.String(http.StatusOK, "%s", buf.String())
+}
+
+func storagehander(c *gin.Context) {
+	ctx := context.Background()
+	// Sets your Google Cloud Platform project ID.
+	projectID := "seventh-aquifer-219706"
+
+	// Creates a client.
+	client, err := storage.NewClient(ctx)
+	if err != nil {
+		log.Fatalf("Failed to create client: %v", err)
+		c.Status(500)
+		return
+	}
+
+	// Sets the name for the new bucket.
+	bucketName := "my-new-bucket"
+
+	// Creates a Bucket instance.
+	bucket := client.Bucket(bucketName)
+
+	// Creates the new bucket.
+	if err := bucket.Create(ctx, projectID, nil); err != nil {
+		log.Fatalf("Failed to create bucket: %v", err)
+		c.Status(500)
+		return
+	}
+
+	fmt.Printf("Bucket %v created.\n", bucketName)
+	c.Status(200)
 }
