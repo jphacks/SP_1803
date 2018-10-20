@@ -1,0 +1,56 @@
+package controller
+
+import (
+	"encoding/json"
+	"log"
+	"mime/multipart"
+
+	"github.com/gin-gonic/gin"
+)
+
+type Prop struct {
+	EmotionID string `json:"emotion_id"`
+	Gender    string `json:"gender"`
+	CreatedAt string `json:"created_at"`
+}
+
+func PostImage(c *gin.Context) {
+	form, err := c.MultipartForm()
+	if err != nil {
+		internalServgerErrorResponse(c, "get multipartform", err)
+		return
+	}
+
+	prop, err := getProp(form)
+	if err != nil {
+		internalServgerErrorResponse(c, "get prop", err)
+		return
+	}
+	log.Println("prop", prop)
+
+	file, err := getMultipartFile(form)
+	if err != nil {
+		internalServgerErrorResponse(c, "get image", err)
+		return
+	}
+	log.Println("image", file)
+}
+
+func getProp(form *multipart.Form) (*Prop, error) {
+	propString := form.Value["prop"][0]
+	var prop Prop
+	err := json.Unmarshal([]byte(propString), &prop)
+	if err != nil {
+		return nil, err
+	}
+	return &prop, nil
+}
+
+func getMultipartFile(form *multipart.Form) (*multipart.File, error) {
+	fileHeader := form.File["image"][0]
+	file, err := fileHeader.Open()
+	if err != nil {
+		return nil, err
+	}
+	return &file, nil
+}
