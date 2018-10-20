@@ -11,8 +11,9 @@ import URLQueryBuilder
 import Alamofire
 
 struct SampleModel: Codable {
-    let name: String
-    let email: String
+    let user_id: Int
+    let emotion_id: Int
+    let created_at: String
 }
 
 
@@ -113,28 +114,40 @@ final class PreviewPresenter {
         )
     }
     
-    func postImage(postImage: UIImage?) {
-        print("あれれ")
-        debugPrint(postImage?.pngData())
+    func postImage(postImage: UIImage?, emotion_id: Int) {
         
+        // 現在時刻を取得
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        let displayTime = formatter.string(from: Date())
+        
+        // pngへ変換
         let imageData = postImage?.pngData()
         
-        
+        // 送るmodel
+        let record = SampleModel(user_id: 0, emotion_id: emotion_id, created_at: displayTime)
         
         Alamofire.upload(
             multipartFormData: { multipartFormData in
                 // 送信する値の指定をここでします
-                multipartFormData.append(imageData!, withName: "bob", fileName: "bobfile", mimeType: "image/png")
-//                multipartFormData.append(sendmsg.data(using: String.Encoding.utf8)!, withName: "userId")
+                let encoder = JSONEncoder()
+                do {
+                    let data = try encoder.encode(record)
+                    let jsonstr:String = String(data: data, encoding: .utf8)!
+                    multipartFormData.append(data, withName: "prop", mimeType: "application/json")
+                } catch {
+                    print(error.localizedDescription)
+                }
+                multipartFormData.append(imageData!, withName: "image", fileName: "bobfile.png", mimeType: "image/png")
         },
-            to: "http://~~~.com/image-upload//images",
-            encodingCompletion: { encodingResult in
+            to: "http://private-e2787-kawai1.apiary-mock.com/images",
+            encodingCompletion: { encodingResult in debugPrint(encodingResult)
                 switch encodingResult {
                 case .success(let upload, _, _):
                     upload.responseJSON { response in
                         // 成功
                         let responseData = response
-                        print(responseData ?? "成功")
+                        print(responseData)
                     }
                 case .failure(let encodingError):
                     // 失敗

@@ -27,14 +27,23 @@ class CreatemodelViewController: UIViewController {
     // シャッターボタン
     @IBOutlet weak var cameraButton: UIButton!
     
+    @IBOutlet weak var maskView: UIView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupCaptureSession()
         setupDevice()
         setupInputOutput()
         setupPreviewLayer()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         captureSession.startRunning()
         styleCaptureButton()
+        maskView.layer.borderColor = UIColor.red.cgColor
+        maskView.layer.borderWidth = 10
     }
     
     override func didReceiveMemoryWarning() {
