@@ -20,5 +20,6 @@ func main() {
 		c.Status(http.StatusOK)
 	})
 	app.POST("/images", controller.PostImage)
+	app.GET("/emotions", controller.ListEmotions)
 	app.Run()
 }
