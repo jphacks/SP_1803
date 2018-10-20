@@ -15,8 +15,7 @@ class CheckMotionViewController: UIViewController {
     
     
     @IBOutlet weak var videoPreview: UIView!
-    @IBOutlet weak var timeLabel: UILabel!
-    @IBOutlet weak var debugImageView: UIImageView!
+    //var timeLabel: UILabel!
     
     // true: use Vision to drive Core ML, false: use plain Core ML
     let useVision = false
@@ -52,7 +51,7 @@ class CheckMotionViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        timeLabel.text = ""
+        //timeLabel.text = ""
         
         setUpBoundingBoxes()
         setUpCoreImage()
@@ -232,7 +231,7 @@ class CheckMotionViewController: UIViewController {
                 self.show(predictions: boundingBoxes)
                 
                 let fps = self.measureFPS()
-                self.timeLabel.text = String(format: "Elapsed %.5f seconds - %.2f FPS", elapsed, fps)
+                //self.timeLabel.text = String(format: "Elapsed %.5f seconds - %.2f FPS", elapsed, fps)
             }
         }
     }
