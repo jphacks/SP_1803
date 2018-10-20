@@ -5,8 +5,8 @@ import (
 )
 
 type Emotion struct {
-	EmotionID   int
-	EmotionName string
+	EmotionID   int    `json:"emotion_id"`
+	EmotionName string `json:"emotion_name"`
 }
 
 type EmotionOperator struct {
