@@ -17,7 +17,7 @@ var (
 	user  = os.Getenv("CLOUDSQL_USER")
 	pass  = os.Getenv("CLOUDSQL_PASSWORD")
 	host  = os.Getenv("CLOUDSQL_HOST")
-	db    = os.Getenv("CLOUD_DB")
+	db    = os.Getenv("CLOUDSQL_DB")
 	dbURI = fmt.Sprintf("%s:%s@tcp(%s)/%s?parseTime=true", user, pass, host, db)
 )
 
