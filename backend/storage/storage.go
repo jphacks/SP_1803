@@ -12,7 +12,7 @@ import (
 
 const (
 	BUCKET_NAME = "kawai-storage"
-	DEVELOPER   = "782882692435-compute@developer.gserviceaccount.com"
+	DEVELOPER   = "cloud-storage-account@seventh-aquifer-219706.iam.gserviceaccount.com"
 )
 
 var (
