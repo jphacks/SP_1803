@@ -1,3 +1,4 @@
+# coding: utf-8
 from flask import Flask, request, make_response, jsonify
 import cv2 as cv
 import numpy as np
@@ -97,7 +98,7 @@ def postprocess(frame, outs):
 
 @app.route('/')
 def hello():
-    send_data.clear()
+    del send_data[:]
     # if 'uploadFile' not in request.files:
     #     make_response(jsonify({'result': 'uploadFile is required.'}))
     # file = request.files['uploadFile']
@@ -108,9 +109,8 @@ def hello():
     net.setInput(blob)
     outs = net.forward(getOutputsNames(net))
     postprocess(im, outs)
-
     return jsonify(send_data)
 
 
 if __name__ == '__main__':
-    app.run(debug = True)
+    app.run(debug = True, host='0.0.0.0', port=5000)
