@@ -10,9 +10,12 @@
 		052305675CABD7C4CB1181A4 /* Pods_KAWAI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8C9557B93F1B009920AF973 /* Pods_KAWAI.framework */; };
 		5787FCB067E5F1BAF18461E4 /* Pods_KAWAIUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D61BA6010BC5200EA192880D /* Pods_KAWAIUITests.framework */; };
 		66DD406FECDD29BCF05E35D7 /* Pods_KAWAITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C59B1B1B9742D20ED13315F4 /* Pods_KAWAITests.framework */; };
+		DF873C2D217AC79C00135078 /* URLQueryBuilder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF873C2C217AC79C00135078 /* URLQueryBuilder.framework */; };
+		DF873C38217AC96400135078 /* Createmodel.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF873C37217AC96400135078 /* Createmodel.storyboard */; };
+		DF873C3A217AC9A100135078 /* Checkmotion.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF873C39217AC9A100135078 /* Checkmotion.storyboard */; };
+		DF873C3C217AC9AF00135078 /* List.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF873C3B217AC9AF00135078 /* List.storyboard */; };
+		DF873C3E217ACE2D00135078 /* MainTabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF873C3D217ACE2D00135078 /* MainTabBar.storyboard */; };
 		DF97EE05217AC01C00FE7DB3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF97EE04217AC01C00FE7DB3 /* AppDelegate.swift */; };
-		DF97EE07217AC01C00FE7DB3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF97EE06217AC01C00FE7DB3 /* ViewController.swift */; };
-		DF97EE0A217AC01C00FE7DB3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF97EE08217AC01C00FE7DB3 /* Main.storyboard */; };
 		DF97EE0C217AC01D00FE7DB3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF97EE0B217AC01D00FE7DB3 /* Assets.xcassets */; };
 		DF97EE0F217AC01D00FE7DB3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF97EE0D217AC01D00FE7DB3 /* LaunchScreen.storyboard */; };
 		DF97EE1A217AC01D00FE7DB3 /* KAWAITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF97EE19217AC01D00FE7DB3 /* KAWAITests.swift */; };
@@ -46,10 +49,13 @@
 		C59B1B1B9742D20ED13315F4 /* Pods_KAWAITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KAWAITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D61BA6010BC5200EA192880D /* Pods_KAWAIUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KAWAIUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8C9557B93F1B009920AF973 /* Pods_KAWAI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KAWAI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF873C2C217AC79C00135078 /* URLQueryBuilder.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = URLQueryBuilder.framework; path = Carthage/Build/iOS/URLQueryBuilder.framework; sourceTree = "<group>"; };
+		DF873C37217AC96400135078 /* Createmodel.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Createmodel.storyboard; sourceTree = "<group>"; };
+		DF873C39217AC9A100135078 /* Checkmotion.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Checkmotion.storyboard; sourceTree = "<group>"; };
+		DF873C3B217AC9AF00135078 /* List.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = List.storyboard; sourceTree = "<group>"; };
+		DF873C3D217ACE2D00135078 /* MainTabBar.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainTabBar.storyboard; sourceTree = "<group>"; };
 		DF97EE01217AC01C00FE7DB3 /* KAWAI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KAWAI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF97EE04217AC01C00FE7DB3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DF97EE06217AC01C00FE7DB3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		DF97EE09217AC01C00FE7DB3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DF97EE0B217AC01D00FE7DB3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DF97EE0E217AC01D00FE7DB3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DF97EE10217AC01D00FE7DB3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -66,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF873C2D217AC79C00135078 /* URLQueryBuilder.framework in Frameworks */,
 				052305675CABD7C4CB1181A4 /* Pods_KAWAI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -92,6 +99,7 @@
 		B5459A4667D03F266171A6C2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DF873C2C217AC79C00135078 /* URLQueryBuilder.framework */,
 				D8C9557B93F1B009920AF973 /* Pods_KAWAI.framework */,
 				C59B1B1B9742D20ED13315F4 /* Pods_KAWAITests.framework */,
 				D61BA6010BC5200EA192880D /* Pods_KAWAIUITests.framework */,
@@ -110,6 +118,24 @@
 				6AE4DE5440275DFCF867D782 /* Pods-KAWAIUITests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		DF873C2F217AC83800135078 /* list */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = list;
+			sourceTree = "<group>";
+		};
+		DF873C30217AC8A500135078 /* storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				DF873C3D217ACE2D00135078 /* MainTabBar.storyboard */,
+				DF873C37217AC96400135078 /* Createmodel.storyboard */,
+				DF873C39217AC9A100135078 /* Checkmotion.storyboard */,
+				DF873C3B217AC9AF00135078 /* List.storyboard */,
+			);
+			path = storyboard;
 			sourceTree = "<group>";
 		};
 		DF97EDF8217AC01C00FE7DB3 = {
@@ -137,13 +163,13 @@
 		DF97EE03217AC01C00FE7DB3 /* KAWAI */ = {
 			isa = PBXGroup;
 			children = (
-				DF97EE35217AC0A900FE7DB3 /* checkkawai */,
+				DF873C30217AC8A500135078 /* storyboard */,
+				DF873C2F217AC83800135078 /* list */,
+				DF97EE35217AC0A900FE7DB3 /* checemotion */,
 				DF97EE34217AC08400FE7DB3 /* createmodel */,
 				DF97EE33217AC06D00FE7DB3 /* interface */,
 				DF97EE32217AC06000FE7DB3 /* model */,
 				DF97EE04217AC01C00FE7DB3 /* AppDelegate.swift */,
-				DF97EE06217AC01C00FE7DB3 /* ViewController.swift */,
-				DF97EE08217AC01C00FE7DB3 /* Main.storyboard */,
 				DF97EE0B217AC01D00FE7DB3 /* Assets.xcassets */,
 				DF97EE0D217AC01D00FE7DB3 /* LaunchScreen.storyboard */,
 				DF97EE10217AC01D00FE7DB3 /* Info.plist */,
@@ -190,11 +216,11 @@
 			path = createmodel;
 			sourceTree = "<group>";
 		};
-		DF97EE35217AC0A900FE7DB3 /* checkkawai */ = {
+		DF97EE35217AC0A900FE7DB3 /* checemotion */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = checkkawai;
+			path = checemotion;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -209,6 +235,7 @@
 				DF97EDFE217AC01C00FE7DB3 /* Frameworks */,
 				DF97EDFF217AC01C00FE7DB3 /* Resources */,
 				44C33C066D8C9B0D060AD681 /* [CP] Embed Pods Frameworks */,
+				DF873C2E217AC7AA00135078 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -305,9 +332,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF873C38217AC96400135078 /* Createmodel.storyboard in Resources */,
+				DF873C3C217AC9AF00135078 /* List.storyboard in Resources */,
 				DF97EE0F217AC01D00FE7DB3 /* LaunchScreen.storyboard in Resources */,
 				DF97EE0C217AC01D00FE7DB3 /* Assets.xcassets in Resources */,
-				DF97EE0A217AC01C00FE7DB3 /* Main.storyboard in Resources */,
+				DF873C3E217ACE2D00135078 /* MainTabBar.storyboard in Resources */,
+				DF873C3A217AC9A100135078 /* Checkmotion.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -398,6 +428,24 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KAWAI/Pods-KAWAI-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		DF873C2E217AC7AA00135078 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/URLQueryBuilder.framework",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n/usr/local/bin/carthage copy-frameworks\n";
+		};
 		E9B5AA20B6645C3170BAC11A /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -427,7 +475,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DF97EE07217AC01C00FE7DB3 /* ViewController.swift in Sources */,
 				DF97EE05217AC01C00FE7DB3 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -464,14 +511,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		DF97EE08217AC01C00FE7DB3 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DF97EE09217AC01C00FE7DB3 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		DF97EE0D217AC01D00FE7DB3 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -606,6 +645,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 634QW7RT8Y;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = KAWAI/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -625,6 +668,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 634QW7RT8Y;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = KAWAI/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
