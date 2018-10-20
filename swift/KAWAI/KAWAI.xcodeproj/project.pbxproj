@@ -20,6 +20,9 @@
 		DF873C44217AE74500135078 /* PreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF873C43217AE74500135078 /* PreviewViewController.swift */; };
 		DF873C46217AE96700135078 /* PreviewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF873C45217AE96700135078 /* PreviewPresenter.swift */; };
 		DF873C48217AEC3100135078 /* IMG_1827.JPG in Resources */ = {isa = PBXBuildFile; fileRef = DF873C47217AEC3100135078 /* IMG_1827.JPG */; };
+		DF873C51217AF48B00135078 /* Sample.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF873C50217AF48B00135078 /* Sample.swift */; };
+		DF873C53217AF49C00135078 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF873C52217AF49C00135078 /* ListViewController.swift */; };
+		DF873C55217AF4AD00135078 /* CheckEmotionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF873C54217AF4AD00135078 /* CheckEmotionViewController.swift */; };
 		DF97EE05217AC01C00FE7DB3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF97EE04217AC01C00FE7DB3 /* AppDelegate.swift */; };
 		DF97EE0C217AC01D00FE7DB3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF97EE0B217AC01D00FE7DB3 /* Assets.xcassets */; };
 		DF97EE0F217AC01D00FE7DB3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF97EE0D217AC01D00FE7DB3 /* LaunchScreen.storyboard */; };
@@ -64,6 +67,9 @@
 		DF873C43217AE74500135078 /* PreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewViewController.swift; sourceTree = "<group>"; };
 		DF873C45217AE96700135078 /* PreviewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewPresenter.swift; sourceTree = "<group>"; };
 		DF873C47217AEC3100135078 /* IMG_1827.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_1827.JPG; sourceTree = "<group>"; };
+		DF873C50217AF48B00135078 /* Sample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sample.swift; sourceTree = "<group>"; };
+		DF873C52217AF49C00135078 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		DF873C54217AF4AD00135078 /* CheckEmotionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckEmotionViewController.swift; sourceTree = "<group>"; };
 		DF97EE01217AC01C00FE7DB3 /* KAWAI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KAWAI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF97EE04217AC01C00FE7DB3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DF97EE0B217AC01D00FE7DB3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -144,6 +150,7 @@
 		DF873C4E217AF3EC00135078 /* model */ = {
 			isa = PBXGroup;
 			children = (
+				DF873C50217AF48B00135078 /* Sample.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -151,6 +158,7 @@
 		DF873C4F217AF3F800135078 /* list */ = {
 			isa = PBXGroup;
 			children = (
+				DF873C52217AF49C00135078 /* ListViewController.swift */,
 			);
 			path = list;
 			sourceTree = "<group>";
@@ -234,6 +242,7 @@
 		DF97EE35217AC0A900FE7DB3 /* checkemotion */ = {
 			isa = PBXGroup;
 			children = (
+				DF873C54217AF4AD00135078 /* CheckEmotionViewController.swift */,
 			);
 			path = checkemotion;
 			sourceTree = "<group>";
@@ -492,10 +501,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				DF873C40217AD00E00135078 /* ApiManager.swift in Sources */,
+				DF873C51217AF48B00135078 /* Sample.swift in Sources */,
 				DF97EE05217AC01C00FE7DB3 /* AppDelegate.swift in Sources */,
 				DF873C42217ADB2300135078 /* CreatemodelViewController.swift in Sources */,
 				DF873C46217AE96700135078 /* PreviewPresenter.swift in Sources */,
 				DF873C44217AE74500135078 /* PreviewViewController.swift in Sources */,
+				DF873C55217AF4AD00135078 /* CheckEmotionViewController.swift in Sources */,
+				DF873C53217AF49C00135078 /* ListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
