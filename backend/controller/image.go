@@ -28,12 +28,19 @@ func PostImage(c *gin.Context) {
 	}
 	log.Println("prop", prop)
 
-	file, err := getMultipartFile(form)
+	file, name, err := getMultipartFile(form)
 	if err != nil {
 		internalServgerErrorResponse(c, "get image", err)
 		return
 	}
 	log.Println("image", file)
+	if err = storageContext.CreateFile(name, *file); err != nil {
+		internalServgerErrorResponse(c, "create gcs file", err)
+		return
+	}
+
+	okResponse(c, "done create image file on GCS")
+	return
 }
 
 func getProp(form *multipart.Form) (*Prop, error) {
@@ -46,11 +53,11 @@ func getProp(form *multipart.Form) (*Prop, error) {
 	return &prop, nil
 }
 
-func getMultipartFile(form *multipart.Form) (*multipart.File, error) {
+func getMultipartFile(form *multipart.Form) (*multipart.File, string, error) {
 	fileHeader := form.File["image"][0]
 	file, err := fileHeader.Open()
 	if err != nil {
-		return nil, err
+		return nil, "", err
 	}
-	return &file, nil
+	return &file, fileHeader.Filename, nil
 }

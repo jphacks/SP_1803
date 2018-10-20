@@ -30,9 +30,9 @@ func NewStorageContext() (*StorageContext, error) {
 	}, nil
 }
 
-func (s *StorageContext) CreateFile(fileName string, reader *io.Reader) error {
+func (s *StorageContext) CreateFile(fileName string, reader io.Reader) error {
 	obj := s.Bucket.Object(fileName)
-	buff, err := ioutil.ReadAll(*reader)
+	buff, err := ioutil.ReadAll(reader)
 	if err != nil {
 		return err
 	}
