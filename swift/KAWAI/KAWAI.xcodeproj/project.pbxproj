@@ -15,6 +15,7 @@
 		DF873C3A217AC9A100135078 /* Checkmotion.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF873C39217AC9A100135078 /* Checkmotion.storyboard */; };
 		DF873C3C217AC9AF00135078 /* List.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF873C3B217AC9AF00135078 /* List.storyboard */; };
 		DF873C3E217ACE2D00135078 /* MainTabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF873C3D217ACE2D00135078 /* MainTabBar.storyboard */; };
+		DF873C40217AD00E00135078 /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF873C3F217AD00E00135078 /* ApiManager.swift */; };
 		DF97EE05217AC01C00FE7DB3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF97EE04217AC01C00FE7DB3 /* AppDelegate.swift */; };
 		DF97EE0C217AC01D00FE7DB3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF97EE0B217AC01D00FE7DB3 /* Assets.xcassets */; };
 		DF97EE0F217AC01D00FE7DB3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF97EE0D217AC01D00FE7DB3 /* LaunchScreen.storyboard */; };
@@ -54,6 +55,7 @@
 		DF873C39217AC9A100135078 /* Checkmotion.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Checkmotion.storyboard; sourceTree = "<group>"; };
 		DF873C3B217AC9AF00135078 /* List.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = List.storyboard; sourceTree = "<group>"; };
 		DF873C3D217ACE2D00135078 /* MainTabBar.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainTabBar.storyboard; sourceTree = "<group>"; };
+		DF873C3F217AD00E00135078 /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
 		DF97EE01217AC01C00FE7DB3 /* KAWAI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KAWAI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF97EE04217AC01C00FE7DB3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DF97EE0B217AC01D00FE7DB3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -205,6 +207,7 @@
 		DF97EE33217AC06D00FE7DB3 /* interface */ = {
 			isa = PBXGroup;
 			children = (
+				DF873C3F217AD00E00135078 /* ApiManager.swift */,
 			);
 			path = interface;
 			sourceTree = "<group>";
@@ -475,6 +478,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF873C40217AD00E00135078 /* ApiManager.swift in Sources */,
 				DF97EE05217AC01C00FE7DB3 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
