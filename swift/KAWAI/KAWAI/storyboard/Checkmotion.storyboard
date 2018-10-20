@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="QBJ-2e-ZQo">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -12,19 +12,34 @@
         <!--Item-->
         <scene sceneID="hSi-Qf-1oe">
             <objects>
-                <viewController id="QBJ-2e-ZQo" sceneMemberID="viewController">
+                <viewController id="QBJ-2e-ZQo" customClass="CheckMotionViewController" customModule="KAWAI" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ppF-hg-YtL">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FW5-lL-eD3" userLabel="Video Preview">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="892"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="FW5-lL-eD3" firstAttribute="top" secondItem="ppF-hg-YtL" secondAttribute="top" id="LZI-Sz-olh"/>
+                            <constraint firstAttribute="bottom" secondItem="FW5-lL-eD3" secondAttribute="baseline" constant="4" id="Ll4-2J-cp2"/>
+                            <constraint firstAttribute="trailing" secondItem="FW5-lL-eD3" secondAttribute="trailing" id="nkX-34-RQP"/>
+                            <constraint firstItem="FW5-lL-eD3" firstAttribute="leading" secondItem="ppF-hg-YtL" secondAttribute="leading" id="tjf-Qx-MEW"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="KnC-6X-ZZo"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="QfP-lT-uzo"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="videoPreview" destination="FW5-lL-eD3" id="uN2-9T-FhP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c5Q-cE-gJV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-536" y="-1815"/>
+            <point key="canvasLocation" x="-537.68115942028987" y="-1817.4107142857142"/>
         </scene>
     </scenes>
 </document>

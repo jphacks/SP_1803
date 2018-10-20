@@ -10,6 +10,14 @@
 		052305675CABD7C4CB1181A4 /* Pods_KAWAI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8C9557B93F1B009920AF973 /* Pods_KAWAI.framework */; };
 		5787FCB067E5F1BAF18461E4 /* Pods_KAWAIUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D61BA6010BC5200EA192880D /* Pods_KAWAIUITests.framework */; };
 		66DD406FECDD29BCF05E35D7 /* Pods_KAWAITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C59B1B1B9742D20ED13315F4 /* Pods_KAWAITests.framework */; };
+		8F5998A1217AFA0800D79FD7 /* CheckMotionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5998A0217AFA0800D79FD7 /* CheckMotionViewController.swift */; };
+		8F5998A3217AFD5800D79FD7 /* YOLO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5998A2217AFD5800D79FD7 /* YOLO.swift */; };
+		8F5998A5217AFDFA00D79FD7 /* VideoCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5998A4217AFDFA00D79FD7 /* VideoCapture.swift */; };
+		8F5998A7217AFE3A00D79FD7 /* BoundingBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5998A6217AFE3A00D79FD7 /* BoundingBox.swift */; };
+		8F5998A9217AFED000D79FD7 /* CVPixelBuffer+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5998A8217AFED000D79FD7 /* CVPixelBuffer+Helpers.swift */; };
+		8F5998AB217AFEFE00D79FD7 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5998AA217AFEFE00D79FD7 /* Helpers.swift */; };
+		8F5998AD217AFF6000D79FD7 /* TinyYOLO.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 8F5998AC217AFF6000D79FD7 /* TinyYOLO.mlmodel */; };
+		8F5998AF217AFFA000D79FD7 /* UIImage+CVPixelBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5998AE217AFFA000D79FD7 /* UIImage+CVPixelBuffer.swift */; };
 		DF873C2D217AC79C00135078 /* URLQueryBuilder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF873C2C217AC79C00135078 /* URLQueryBuilder.framework */; };
 		DF873C38217AC96400135078 /* Createmodel.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF873C37217AC96400135078 /* Createmodel.storyboard */; };
 		DF873C3A217AC9A100135078 /* Checkmotion.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF873C39217AC9A100135078 /* Checkmotion.storyboard */; };
@@ -52,6 +60,14 @@
 		4DDA5107259B4494637CE769 /* Pods-KAWAIUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KAWAIUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KAWAIUITests/Pods-KAWAIUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		6AE4DE5440275DFCF867D782 /* Pods-KAWAIUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KAWAIUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-KAWAIUITests/Pods-KAWAIUITests.release.xcconfig"; sourceTree = "<group>"; };
 		7AFA0068450CCF5A912D82CF /* Pods-KAWAITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KAWAITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-KAWAITests/Pods-KAWAITests.release.xcconfig"; sourceTree = "<group>"; };
+		8F5998A0217AFA0800D79FD7 /* CheckMotionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckMotionViewController.swift; sourceTree = "<group>"; };
+		8F5998A2217AFD5800D79FD7 /* YOLO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YOLO.swift; sourceTree = "<group>"; };
+		8F5998A4217AFDFA00D79FD7 /* VideoCapture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCapture.swift; sourceTree = "<group>"; };
+		8F5998A6217AFE3A00D79FD7 /* BoundingBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoundingBox.swift; sourceTree = "<group>"; };
+		8F5998A8217AFED000D79FD7 /* CVPixelBuffer+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CVPixelBuffer+Helpers.swift"; sourceTree = "<group>"; };
+		8F5998AA217AFEFE00D79FD7 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
+		8F5998AC217AFF6000D79FD7 /* TinyYOLO.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = TinyYOLO.mlmodel; sourceTree = "<group>"; };
+		8F5998AE217AFFA000D79FD7 /* UIImage+CVPixelBuffer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+CVPixelBuffer.swift"; sourceTree = "<group>"; };
 		B0FD0F79BBC9C27786076EB0 /* Pods-KAWAI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KAWAI.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KAWAI/Pods-KAWAI.debug.xcconfig"; sourceTree = "<group>"; };
 		C2535B197D6AF42D6E362170 /* Pods-KAWAITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KAWAITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KAWAITests/Pods-KAWAITests.debug.xcconfig"; sourceTree = "<group>"; };
 		C59B1B1B9742D20ED13315F4 /* Pods_KAWAITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KAWAITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -242,7 +258,14 @@
 		DF97EE35217AC0A900FE7DB3 /* checkemotion */ = {
 			isa = PBXGroup;
 			children = (
-				DF873C54217AF4AD00135078 /* CheckEmotionViewController.swift */,
+				8F5998AC217AFF6000D79FD7 /* TinyYOLO.mlmodel */,
+				8F5998A0217AFA0800D79FD7 /* CheckMotionViewController.swift */,
+				8F5998AE217AFFA000D79FD7 /* UIImage+CVPixelBuffer.swift */,
+				8F5998A8217AFED000D79FD7 /* CVPixelBuffer+Helpers.swift */,
+				8F5998A4217AFDFA00D79FD7 /* VideoCapture.swift */,
+				8F5998A2217AFD5800D79FD7 /* YOLO.swift */,
+				8F5998A6217AFE3A00D79FD7 /* BoundingBox.swift */,
+				8F5998AA217AFEFE00D79FD7 /* Helpers.swift */,
 			);
 			path = checkemotion;
 			sourceTree = "<group>";
@@ -500,10 +523,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				DF873C40217AD00E00135078 /* ApiManager.swift in Sources */,
+				8F5998A1217AFA0800D79FD7 /* CheckMotionViewController.swift in Sources */,
+				8F5998A3217AFD5800D79FD7 /* YOLO.swift in Sources */,
+				8F5998A7217AFE3A00D79FD7 /* BoundingBox.swift in Sources */,
 				DF873C51217AF48B00135078 /* Sample.swift in Sources */,
 				DF97EE05217AC01C00FE7DB3 /* AppDelegate.swift in Sources */,
 				DF873C42217ADB2300135078 /* CreatemodelViewController.swift in Sources */,
+				8F5998AF217AFFA000D79FD7 /* UIImage+CVPixelBuffer.swift in Sources */,
+				8F5998A5217AFDFA00D79FD7 /* VideoCapture.swift in Sources */,
 				DF873C46217AE96700135078 /* PreviewPresenter.swift in Sources */,
+				8F5998AD217AFF6000D79FD7 /* TinyYOLO.mlmodel in Sources */,
+				8F5998A9217AFED000D79FD7 /* CVPixelBuffer+Helpers.swift in Sources */,
+				8F5998AB217AFEFE00D79FD7 /* Helpers.swift in Sources */,
 				DF873C44217AE74500135078 /* PreviewViewController.swift in Sources */,
 				DF873C57217B087B00135078 /* UIImage.swift in Sources */,
 				DF873C55217AF4AD00135078 /* CheckEmotionViewController.swift in Sources */,
@@ -676,7 +707,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 634QW7RT8Y;
+				DEVELOPMENT_TEAM = 355CZ5YAD5;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -699,7 +730,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 634QW7RT8Y;
+				DEVELOPMENT_TEAM = 355CZ5YAD5;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
