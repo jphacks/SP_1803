@@ -18,7 +18,7 @@ type ImageOperator struct {
 }
 
 func (o *ImageOperator) Select(emo_id string) (*[]Image, error) {
-	query := "select * from images where emotion_id = ?;"
+	query := "select * from images where emotion_id = ? order by created_at desc;"
 	rows, err := o.Connetion.Query(query, emo_id)
 	if err != nil {
 		return nil, err
