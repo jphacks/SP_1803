@@ -16,7 +16,7 @@ enum loadStatus {
 }
 
 struct ApiManager {
-    private let host = "http://35.221.98.97:8080"
+    private let host = "http://35.221.98.97"
     private let method: HTTPMethod
     private var parameters: Parameters?
     private var components = URLComponents()
@@ -29,10 +29,11 @@ struct ApiManager {
             self.parameters = nil
         }
         components.scheme = "http"
-        components.host = "35.221.98.97:8080"
+        components.host = "35.221.98.97"
         components.query = queryString
         components.path = path
-        //        components.port = 8080
+        components.port = 8080
+        print(components.url)
     }
     
     func request(success: @escaping (_ data: Data) -> Void, fail: @escaping (_ error: Error?) -> Void) {
