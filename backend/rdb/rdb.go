@@ -11,14 +11,14 @@ import (
 
 const (
 	DB_DRIVER = "mysql"
-	SOCKET    = "/cloudsql"
 )
 
 var (
-	connectionName = os.Getenv("CLOUDSQL_CONNECTION_NAME")
-	user           = os.Getenv("CLOUDSQL_USER")
-	pass           = os.Getenv("CLOUDSQL_PASSWORD")
-	dbURI          = fmt.Sprintf("%s:%s@unix(%s/%s)/", user, pass, SOCKET, connectionName)
+	user  = os.Getenv("CLOUDSQL_USER")
+	pass  = os.Getenv("CLOUDSQL_PASSWORD")
+	host  = os.Getenv("CLOUDSQL_HOST")
+	db    = os.Getenv("CLOUD_DB")
+	dbURI = fmt.Sprintf("%s:%s@tcp(%s)/", user, pass, host)
 )
 
 type DBContext struct {
