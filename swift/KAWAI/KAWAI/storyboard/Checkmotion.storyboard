@@ -12,7 +12,7 @@
         <!--Item-->
         <scene sceneID="hSi-Qf-1oe">
             <objects>
-                <viewController id="QBJ-2e-ZQo" sceneMemberID="viewController">
+                <viewController id="QBJ-2e-ZQo" customClass="CheckMotionViewController" customModule="KAWAI" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ppF-hg-YtL">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -46,6 +46,11 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="QfP-lT-uzo"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="debugImageView" destination="qKP-pp-4qD" id="Yet-fL-5C4"/>
+                        <outlet property="timeLabel" destination="Mh2-1c-GTV" id="LvN-gL-teV"/>
+                        <outlet property="videoPreview" destination="Ys0-ei-H3V" id="OBp-MI-953"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c5Q-cE-gJV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
