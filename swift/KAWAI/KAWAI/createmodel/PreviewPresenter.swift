@@ -131,6 +131,10 @@ final class PreviewPresenter {
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
         let displayTime = formatter.string(from: Date())
+        // タイムスタンプによる被りを避けるために，ランダムで生成
+        let id = String(Int.random(in: 0 ... 100))
+        formatter.dateFormat = "yyyy-MM-dd-HH-mm-ss"
+        let filename = formatter.string(from: Date()) + String(id) + ".png"
         
         // pngへ変換
         let imageData = postImage?.pngData()
@@ -144,12 +148,11 @@ final class PreviewPresenter {
                 let encoder = JSONEncoder()
                 do {
                     let data = try encoder.encode(record)
-                    let jsonstr:String = String(data: data, encoding: .utf8)!
                     multipartFormData.append(data, withName: "prop", mimeType: "application/json")
                 } catch {
                     print(error.localizedDescription)
                 }
-                multipartFormData.append(imageData!, withName: "image", fileName: "bobfile.png", mimeType: "image/png")
+                multipartFormData.append(imageData!, withName: "image", fileName: filename, mimeType: "image/png")
         },
             to: components.url ?? host,
             encodingCompletion: { encodingResult in //debugPrint(encodingResult)

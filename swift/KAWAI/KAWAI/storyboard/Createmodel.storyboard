@@ -74,9 +74,9 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background_m" translatesAutoresizingMaskIntoConstraints="NO" id="0qH-ct-J0j">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5yc-ur-aDX">
-                                <rect key="frame" x="16" y="39" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5yc-ur-aDX">
+                                <rect key="frame" x="15.999999999999996" y="39" width="45.666666666666657" height="30"/>
+                                <state key="normal" title="Button" image="btn_back"/>
                                 <connections>
                                     <action selector="backbutton:" destination="gvK-HE-htZ" eventType="touchUpInside" id="zwu-ZK-zdt"/>
                                 </connections>
@@ -119,13 +119,15 @@
                             <constraint firstItem="5yc-ur-aDX" firstAttribute="leading" secondItem="TcV-On-2cM" secondAttribute="leading" constant="16" id="4hw-iq-SDs"/>
                             <constraint firstItem="1qf-UY-R1r" firstAttribute="centerX" secondItem="7VT-UR-iMr" secondAttribute="centerX" id="BGb-84-Ba3"/>
                             <constraint firstItem="TcV-On-2cM" firstAttribute="bottom" secondItem="18O-Je-rGz" secondAttribute="bottom" constant="24" id="FDe-6e-m6e"/>
-                            <constraint firstItem="Kuw-vX-Jld" firstAttribute="top" secondItem="5yc-ur-aDX" secondAttribute="bottom" constant="28" id="GAz-ZB-Ufx"/>
+                            <constraint firstItem="Kuw-vX-Jld" firstAttribute="top" secondItem="1qf-UY-R1r" secondAttribute="bottom" constant="28" id="GAz-ZB-Ufx"/>
                             <constraint firstAttribute="bottom" secondItem="0qH-ct-J0j" secondAttribute="bottom" id="MOG-yn-IiZ"/>
+                            <constraint firstItem="Kuw-vX-Jld" firstAttribute="top" secondItem="5yc-ur-aDX" secondAttribute="bottom" constant="28" id="NHV-Gh-LM9"/>
                             <constraint firstItem="Kuw-vX-Jld" firstAttribute="leading" secondItem="TcV-On-2cM" secondAttribute="leading" constant="16" id="Qf2-yU-2Wr"/>
                             <constraint firstItem="0qH-ct-J0j" firstAttribute="leading" secondItem="TcV-On-2cM" secondAttribute="leading" id="RTM-Aw-xXR"/>
                             <constraint firstItem="1qf-UY-R1r" firstAttribute="top" secondItem="TcV-On-2cM" secondAttribute="top" id="Wlx-TJ-PQR"/>
                             <constraint firstItem="0qH-ct-J0j" firstAttribute="top" secondItem="7VT-UR-iMr" secondAttribute="top" id="cYT-8S-L1u"/>
                             <constraint firstItem="TcV-On-2cM" firstAttribute="trailing" secondItem="0qH-ct-J0j" secondAttribute="trailing" id="fGl-Nl-Tpj"/>
+                            <constraint firstItem="1qf-UY-R1r" firstAttribute="leading" secondItem="5yc-ur-aDX" secondAttribute="trailing" constant="13.67" id="mFU-q4-AZD"/>
                             <constraint firstItem="TcV-On-2cM" firstAttribute="trailing" secondItem="Kuw-vX-Jld" secondAttribute="trailing" constant="16" id="o8S-ba-hgv"/>
                             <constraint firstItem="5yc-ur-aDX" firstAttribute="top" secondItem="7VT-UR-iMr" secondAttribute="top" constant="39" id="vZI-DM-x4H"/>
                         </constraints>
@@ -143,6 +145,7 @@
     </scenes>
     <resources>
         <image name="background_m" width="1125" height="2436"/>
+        <image name="btn_back" width="138" height="89"/>
         <image name="btn_camera" width="258" height="258"/>
         <image name="btn_regi_m" width="464" height="196"/>
         <image name="label" width="641" height="76"/>
