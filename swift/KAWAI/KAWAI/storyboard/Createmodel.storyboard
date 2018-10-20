@@ -12,19 +12,75 @@
         <!--Item-->
         <scene sceneID="qlv-dA-do9">
             <objects>
-                <viewController id="5Ep-Qs-72n" sceneMemberID="viewController">
+                <viewController id="5Ep-Qs-72n" customClass="CreatemodelViewController" customModule="KAWAI" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OJD-MQ-ivb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mkT-q0-p9U">
+                                <rect key="frame" x="157.5" y="498" width="60" height="60"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="Enz-U0-Cih"/>
+                                    <constraint firstAttribute="width" constant="60" id="zYF-Z0-tB6"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="cameraButton_TouchUpInside:" destination="5Ep-Qs-72n" eventType="touchUpInside" id="aWS-SP-gD2"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="brD-J1-8rn" firstAttribute="bottom" secondItem="mkT-q0-p9U" secondAttribute="bottom" constant="60" id="bgs-Of-gpF"/>
+                            <constraint firstItem="mkT-q0-p9U" firstAttribute="centerX" secondItem="OJD-MQ-ivb" secondAttribute="centerX" id="tZY-h6-TS1"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="brD-J1-8rn"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="cRb-wY-o2l"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="cameraButton" destination="mkT-q0-p9U" id="FKC-Az-3XN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="os0-0u-rBm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="36" y="-33"/>
+        </scene>
+        <!--Preview View Controller-->
+        <scene sceneID="mDh-1k-gIt">
+            <objects>
+                <viewController storyboardIdentifier="Preview" id="gvK-HE-htZ" customClass="PreviewViewController" customModule="KAWAI" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7VT-UR-iMr">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kuw-vX-Jld">
+                                <rect key="frame" x="16" y="86" width="343" height="343"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="18O-Je-rGz">
+                                <rect key="frame" x="272" y="542" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y2y-ar-Y8A">
+                                <rect key="frame" x="31" y="551" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="TcV-On-2cM"/>
+                    </view>
+                    <connections>
+                        <outlet property="previewImage" destination="Kuw-vX-Jld" id="ngh-rF-1gw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xeI-Cu-fRd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="940" y="-34.632683658170919"/>
         </scene>
     </scenes>
 </document>
