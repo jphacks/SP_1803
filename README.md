@@ -1,9 +1,6 @@
 # See Sense
-
-[![Product Name](image.png)](https://www.youtube.com/watch?v=G5rULR53uMk)
-![concept](img/image_concept.png "コンセプト")
+[![Product Name](img/image_concept.png)](https://youtu.be/Wgz41M9OOVo)
 ![overview](img/overview.PNG "概要")
-![ai_explain](img/ai_explain.PNG "2日間で頑張ったところ")
 
 ## 製品概要
 ### 異性の感性をDeepLearningを使って知ることができるアプリ
@@ -138,3 +135,4 @@ iphone内で実現させるアプリにする．現在は，サーバーにい�
 * DeepLearning技術に関する調査および実装を特に頑張りました．独創的な部分として，複数のDeepLearning技術を用いることで，AIが感性を判定できるように仕向けたことです．
 物体認識では，近年注目されているYoloを使用し，画像から物体の認識を可能としました．
 その後，Tensorflowにて感性でクラスタリングした結果を出力するように実装しました．
+![ai_explain](img/ai_explain.PNG "2日間で頑張ったところ")
