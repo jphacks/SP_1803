@@ -29,7 +29,7 @@ type ImageDetail struct {
 	ImageURL  string `json:"image_url"`
 	EmotionID int    `json:"emotion_id"`
 	Gender    string `json:"gender"`
-	Good      int    `json:"godd"`
+	Good      int    `json:"good"`
 }
 
 func GoodImage(c *gin.Context) {
