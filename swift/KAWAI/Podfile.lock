@@ -1,0 +1,28 @@
+PODS:
+  - Alamofire (4.7.3)
+  - Hero (1.3.1)
+  - Kingfisher (4.10.0)
+  - PageMenu (2.0.0)
+
+DEPENDENCIES:
+  - Alamofire
+  - Hero
+  - Kingfisher
+  - PageMenu
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - Hero
+    - Kingfisher
+    - PageMenu
+
+SPEC CHECKSUMS:
+  Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
+  Hero: 1c3c625ba05856f305d29f5c270f8766c5ff2df7
+  Kingfisher: 43c4b802d8b5256cf1f4379e9cd10b329be6d3e2
+  PageMenu: 9c38fd7e0d9ef4b1408320f55bb907bbc0e538dc
+
+PODFILE CHECKSUM: 494369b9a94ca6c6b688d7a13ff87984fac21579
+
+COCOAPODS: 1.5.3
