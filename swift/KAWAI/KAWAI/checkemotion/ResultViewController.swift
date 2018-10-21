@@ -16,6 +16,14 @@ class ResultViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         ImageView.image = postImage!
+        // Screen Size の取得
+        let screenWidth = self.ImageView.bounds.width
+        let screenHeight = self.ImageView.bounds.height
+        
+        let testDraw = TestDraw(frame: CGRect(x: ImageView.frame.origin.x, y: ImageView.frame.origin.y, width: screenWidth, height: screenHeight))
+        self.view.addSubview(testDraw)
+        // 不透明にしない（透明）
+        testDraw.isOpaque = false
     }
     
     @IBAction func back(_ sender: Any) {

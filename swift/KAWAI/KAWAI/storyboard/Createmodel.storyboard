@@ -178,18 +178,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aa4-H7-5ax">
-                                <rect key="frame" x="16" y="234.66666666666663" width="343" height="343"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="aa4-H7-5ax" secondAttribute="height" multiplier="1:1" id="kr7-vy-4DJ"/>
-                                </constraints>
+                                <rect key="frame" x="16" y="82.333333333333314" width="343" height="647.33333333333348"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e0T-v6-dXd">
-                                <rect key="frame" x="166" y="104" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ryV-v1-jbB">
                                 <rect key="frame" x="15.999999999999996" y="44" width="45.666666666666657" height="30.333333333333329"/>
                                 <constraints>
@@ -209,6 +199,7 @@
                             <constraint firstItem="aa4-H7-5ax" firstAttribute="leading" secondItem="uJh-s9-uNg" secondAttribute="leading" constant="16" id="Xir-uk-zhg"/>
                             <constraint firstItem="uJh-s9-uNg" firstAttribute="trailing" secondItem="ryV-v1-jbB" secondAttribute="trailing" constant="313.32999999999998" id="agD-x2-2tf"/>
                             <constraint firstItem="uJh-s9-uNg" firstAttribute="trailing" secondItem="aa4-H7-5ax" secondAttribute="trailing" constant="16" id="fuB-4h-AXg"/>
+                            <constraint firstItem="aa4-H7-5ax" firstAttribute="top" secondItem="ryV-v1-jbB" secondAttribute="bottom" constant="8" id="lY9-ZO-JnY"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="uJh-s9-uNg"/>
                     </view>
