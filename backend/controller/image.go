@@ -11,10 +11,6 @@ import (
 	"github.com/jphacks/SP_1803/backend/rdb"
 )
 
-var (
-	loc = time.FixedZone("Asia/Tokyo", 9*60*60)
-)
-
 type Prop struct {
 	EmotionID int    `json:"emotion_id"`
 	Gender    string `json:"gender"`
@@ -27,44 +23,65 @@ type Image struct {
 }
 
 func PostImage(c *gin.Context) {
+	start := time.Now()
 	form, err := c.MultipartForm()
 	if err != nil {
 		internalServgerErrorResponse(c, "get multipartform", err)
 		return
 	}
+	end := time.Now()
+	duration := end.Sub(start)
+	log.Println("multipartform time", duration.Seconds())
 	log.Println("form", form)
 
+	start = time.Now()
 	prop, err := getProp(form)
 	if err != nil {
 		internalServgerErrorResponse(c, "get prop", err)
 		return
 	}
+	end = time.Now()
+	duration = end.Sub(start)
+	log.Println("get prop time", duration.Seconds())
 	log.Println("prop", prop)
 
+	start = time.Now()
 	file, name, err := getMultipartFile(form)
 	if err != nil {
 		internalServgerErrorResponse(c, "get image", err)
 		return
 	}
+	end = time.Now()
+	duration = end.Sub(start)
+	log.Println("get file time", duration.Seconds())
 	log.Println("image", file)
 
+	start = time.Now()
 	if err = storageContext.CreateFile(name, *file); err != nil {
 		internalServgerErrorResponse(c, "create gcs file", err)
 		return
 	}
+	end = time.Now()
+	duration = end.Sub(start)
+	log.Println("storage create time", duration.Seconds())
 
+	start = time.Now()
 	url, err := storageContext.GetURL(name)
 	if err != nil {
 		internalServgerErrorResponse(c, "get file url", err)
 		return
 	}
+	end = time.Now()
+	duration = end.Sub(start)
+	log.Println("storage get url time", duration.Seconds())
 	log.Println("url", url)
 
+	start = time.Now()
 	imgOpe := rdb.ImageOperator{
 		Connetion: dbContext.Connection,
 	}
 
-	createdTime, err := time.ParseInLocation("2006-01-02 15:04:05", prop.CreatedAt, loc)
+	createdTime, err := time.Parse("2006-01-02 15:04:05", prop.CreatedAt)
 
 	img := rdb.Image{
 		ImageURL:  url,
@@ -76,6 +93,9 @@ func PostImage(c *gin.Context) {
 		internalServgerErrorResponse(c, "insert image record", err)
 		return
 	}
+	end = time.Now()
+	duration = end.Sub(start)
+	log.Println("insert recode time", duration.Seconds())
 
 	okResponse(c, "done create image file on GCS")
 	return
