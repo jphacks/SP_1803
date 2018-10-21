@@ -11,4 +11,5 @@ import Foundation
 struct ImageListModel: Codable{
     let image_id: Int
     let image_url: String
+    let good: Int
 }
