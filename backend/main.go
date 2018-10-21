@@ -14,6 +14,7 @@ func main() {
 	})
 	app.POST("/images", controller.PostImage)
 	app.GET("/images", controller.ListImages)
+	app.POST("/images/:image_id/good", controller.GoodImage)
 	app.GET("/emotions", controller.ListEmotions)
 	app.Run()
 }

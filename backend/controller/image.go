@@ -5,6 +5,7 @@ import (
 	"log"
 	"mime/multipart"
 	"net/http"
+	"strconv"
 	"time"
 
 	"github.com/gin-gonic/gin"
@@ -21,6 +22,23 @@ type Image struct {
 	ImageID  int    `json:"image_id"`
 	ImageURL string `json:"image_url"`
 	Good     int    `json:"good"`
+}
+
+func GoodImage(c *gin.Context) {
+	imageIDString := c.Param("image_id")
+	imageID, err := strconv.Atoi(imageIDString)
+	if err != nil {
+		internalServgerErrorResponse(c, "convert to string int", err)
+		return
+	}
+	imgOpe := &rdb.ImageOperator{
+		Connetion: dbContext.Connection,
+	}
+	if err = imgOpe.Good(imageID); err != nil {
+		internalServgerErrorResponse(c, "cant good rdb", err)
+		return
+	}
+	okResponse(c, "done good")
 }
 
 func PostImage(c *gin.Context) {
