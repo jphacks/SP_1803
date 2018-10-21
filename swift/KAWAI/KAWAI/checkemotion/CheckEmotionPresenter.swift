@@ -163,7 +163,7 @@ final class CheckEmotionPresenter {
                 // 送信する値の指定をここでします
                 multipartFormData.append(imageData!, withName: "image", fileName: filename, mimeType: "image/jpeg")
             },
-            to: components.url ?? host,
+            to: components.url!,
             encodingCompletion: { encodingResult in //debugPrint(encodingResult)
                 switch encodingResult {
                 case .success(let upload, _, _):

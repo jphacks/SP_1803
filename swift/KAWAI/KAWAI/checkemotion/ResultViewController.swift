@@ -13,19 +13,37 @@ class ResultViewController: UIViewController {
     @IBOutlet weak var ImageView: UIImageView!
     var postImage: UIImage?
     var clipData: [testModel] = []
+    var arrayView: [UIView] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let frameX = Int(self.ImageView.frame.origin.x)
+        let frameY = Int(self.ImageView.frame.origin.y)
+        
         ImageView.image = postImage!
         for element in clipData {
-            print(element)
+            let recta = CGRect(x: element.x1/7 + frameX, y: element.y1/7 + frameY, width: (element.x2 - element.x1)/7, height: (element.y2 - element.y1)/7)
+            let bobViewa = UIView(frame: recta)
+            bobViewa.backgroundColor = UIColor.clear
+            bobViewa.layer.borderColor = UIColor.magenta.cgColor
+            bobViewa.layer.borderWidth = 10
+            
+            self.view.addSubview(bobViewa)
+            
+            let label = UILabel()
+            label.text = "かわいい"
+            label.textColor = UIColor.magenta
+            
+            label.frame = CGRect(x: element.x1/7 + frameX, y: element.y1/7 + frameY - 20, width: (element.x2 - element.x1)/7, height: (element.y2 - element.y1)/7)
+            self.view.addSubview(label)
         }
         
-        var frameX = Int(self.ImageView.frame.origin.x)
-        var frameY = Int(self.ImageView.frame.origin.y)
+//        var frameX = Int(self.ImageView.frame.origin.x)
+//        var frameY = Int(self.ImageView.frame.origin.y)
         
         
-        var rect = CGRect(x: self.clipData[0].x1 + frameX, y: self.clipData[0].y1 + frameY, width: (self.clipData[0].x2 - self.clipData[0].x1)/2, height: (self.clipData[0].y2 - self.clipData[0].y1)/2)
+        var rect = CGRect(x: self.clipData[0].x1/7 + frameX-20, y: self.clipData[0].y1/7 + frameY, width: (self.clipData[0].x2/7 - self.clipData[0].x1/7)/2, height: (self.clipData[0].y2/7 - self.clipData[0].y1/7)/2)
 //        var rect = CGRect(x: 100, y:260, width:150, height:200)
         
         var bobView = UIView(frame: rect)
@@ -41,7 +59,7 @@ class ResultViewController: UIViewController {
         let screenHeight = self.postImage?.size.height
         
 //        let testDraw = TestDraw(frame: CGRect(x: 0, y: 0, width: screenWidth, height: screenHeight))
-        self.view.addSubview(bobView)
+//        self.view.addSubview(bobView)
 
         let label = UILabel()
         label.text = "かわいい"
@@ -49,7 +67,7 @@ class ResultViewController: UIViewController {
 //        label.frame = CGRect(x: 100, y:160, width:100, height:100)
         
         label.frame = CGRect(x: self.clipData[0].x1 + frameX, y: self.clipData[0].y1 + frameY-20, width: self.clipData[0].x2 - self.clipData[0].x1, height: self.clipData[0].y2 - self.clipData[0].y1)
-        self.view.addSubview(label)
+//        self.view.addSubview(label)
     }
     
     @IBAction func back(_ sender: Any) {
