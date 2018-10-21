@@ -1,10 +1,10 @@
 # See Sense
-[![Product Name](img/image_concept.png)](https://youtu.be/Wgz41M9OOVo)
+[![Product Name](img/image_concept.png)](https://youtu.be/zFYBE5_uWAE)
 ![overview](img/overview.PNG "概要")
 
 ## 製品概要
 ### 異性の感性をDeepLearningを使って知ることができるアプリ
-感性 Tech（X → 今回皆さんが選定した好きな言葉に書き換えてください）
+感性 XTech
 
 - このアプリは，スマートフォンで動くアプリになります．
 - 異性ごとに異なるモノに対する感性に着目しました．
@@ -124,6 +124,11 @@ iphone内で実現させるアプリにする．現在は，サーバーにい�
 *　Google Container Registry(ビルドしたコンテナイメージをセキュアに格納)
 *　Apiary(WebAPIの設計・共有)
 *  AWS(機械学習のサーバー)
+*  Alamofire
+*  Kingfisher
+*  Hero
+*  PageMenu
+*  SwiftyJSON
 #### デバイス
 *　なし
 
