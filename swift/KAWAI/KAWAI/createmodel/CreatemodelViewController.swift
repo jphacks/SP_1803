@@ -115,7 +115,7 @@ extension CreatemodelViewController{
     // カメラの画質の設定
     func setupCaptureSession() {
 //        captureSession.sessionPreset = AVCaptureSession.Preset.photo
-        captureSession.sessionPreset = AVCaptureSession.Preset.iFrame1280x720
+        captureSession.sessionPreset = AVCaptureSession.Preset.vga640x480
     }
     
     // デバイスの設定
