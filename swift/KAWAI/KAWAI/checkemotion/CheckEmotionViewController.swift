@@ -67,7 +67,7 @@ class CheckEmotionViewController: UIViewController {
 //            let secondViewController = self.storyboard?.instantiateViewController(withIdentifier: "Result") as! ResultViewController
 //            secondViewController.postImage = self.postImage!
 //            // 5秒後に実行
-//            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + .seconds(5)) {
+//            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + .seconds(2)) {
 //                self.indicator.stopAnimating()
 //                self.present(secondViewController, animated: true, completion: nil)
 //            }
@@ -102,7 +102,7 @@ extension CheckEmotionViewController: CheckEmotionProtocol {
         
         let secondViewController = self.storyboard?.instantiateViewController(withIdentifier: "Result") as! ResultViewController
         secondViewController.postImage = self.postImage!
-//        secondViewController.clipData = self.presenter.contentsList
+        secondViewController.clipData = self.presenter.contentsList
         
         self.present(secondViewController, animated: true, completion: nil)
         
