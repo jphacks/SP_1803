@@ -2,8 +2,8 @@
 
 [![Product Name](image.png)](https://www.youtube.com/watch?v=G5rULR53uMk)
 ![concept](img/image_concept.png "コンセプト")
-![overview](img/overview.png "概要")
-![ai_explain](img/ai_explain.png "2日間で頑張ったところ")
+![overview](img/overview.PNG "概要")
+![ai_explain](img/ai_explain.PNG "2日間で頑張ったところ")
 
 ## 製品概要
 ### 異性の感性をDeepLearningを使って知ることができるアプリ
