@@ -7,13 +7,6 @@ import (
 	"github.com/jphacks/SP_1803/backend/controller"
 )
 
-type Prop struct {
-	UserID    string `json:"user_id"`
-	EmotionID string `json:"emotion_id"`
-	Gender    string `json:"gender"`
-	CreatedAt string `json:"created_at"`
-}
-
 func main() {
 	app := gin.Default()
 	app.GET("/health", func(c *gin.Context) {
