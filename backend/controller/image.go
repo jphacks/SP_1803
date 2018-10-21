@@ -20,6 +20,7 @@ type Prop struct {
 type Image struct {
 	ImageID  int    `json:"image_id"`
 	ImageURL string `json:"image_url"`
+	Good     int    `json:"good"`
 }
 
 func PostImage(c *gin.Context) {
@@ -117,6 +118,7 @@ func parseViewModelImage(dbImages *[]rdb.Image) *[]Image {
 		vm := Image{
 			ImageID:  item.ImageID,
 			ImageURL: item.ImageURL,
+			Good:     item.Good,
 		}
 		vms = append(vms, vm)
 	}

@@ -13,6 +13,13 @@ create table images (
     FOREIGN KEY(emotion_id) REFERENCES emotions(emotion_id)
 ) engine=InnoDB;
 
+create table comments (
+    comment_id INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+    comment_content VARCHAR(50) NOT NULL,
+    image_id INT NOT NULL,
+    FOREIGN KEY(image_id) REFERENCES images(image_id)
+) engine=InnoDB;
+
 insert into emotions (emotion_name) values ("かわいい");
 insert into emotions (emotion_name) values ("かっこいい");
 insert into emotions (emotion_name) values ("おもしろい");
