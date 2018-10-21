@@ -10,6 +10,9 @@
 		052305675CABD7C4CB1181A4 /* Pods_KAWAI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8C9557B93F1B009920AF973 /* Pods_KAWAI.framework */; };
 		5787FCB067E5F1BAF18461E4 /* Pods_KAWAIUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D61BA6010BC5200EA192880D /* Pods_KAWAIUITests.framework */; };
 		66DD406FECDD29BCF05E35D7 /* Pods_KAWAITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C59B1B1B9742D20ED13315F4 /* Pods_KAWAITests.framework */; };
+		DF82619D217B9F7600114775 /* PageMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF82619C217B9F7600114775 /* PageMenuViewController.swift */; };
+		DF82619F217BAB0A00114775 /* CheckEmotionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF82619E217BAB0A00114775 /* CheckEmotionPresenter.swift */; };
+		DF8261A1217BB6B300114775 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8261A0217BB6B300114775 /* ResultViewController.swift */; };
 		DF873C2D217AC79C00135078 /* URLQueryBuilder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF873C2C217AC79C00135078 /* URLQueryBuilder.framework */; };
 		DF873C38217AC96400135078 /* Createmodel.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF873C37217AC96400135078 /* Createmodel.storyboard */; };
 		DF873C3A217AC9A100135078 /* Checkmotion.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF873C39217AC9A100135078 /* Checkmotion.storyboard */; };
@@ -62,6 +65,9 @@
 		C59B1B1B9742D20ED13315F4 /* Pods_KAWAITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KAWAITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D61BA6010BC5200EA192880D /* Pods_KAWAIUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KAWAIUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8C9557B93F1B009920AF973 /* Pods_KAWAI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KAWAI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF82619C217B9F7600114775 /* PageMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageMenuViewController.swift; sourceTree = "<group>"; };
+		DF82619E217BAB0A00114775 /* CheckEmotionPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckEmotionPresenter.swift; sourceTree = "<group>"; };
+		DF8261A0217BB6B300114775 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		DF873C2C217AC79C00135078 /* URLQueryBuilder.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = URLQueryBuilder.framework; path = Carthage/Build/iOS/URLQueryBuilder.framework; sourceTree = "<group>"; };
 		DF873C37217AC96400135078 /* Createmodel.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Createmodel.storyboard; sourceTree = "<group>"; };
 		DF873C39217AC9A100135078 /* Checkmotion.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Checkmotion.storyboard; sourceTree = "<group>"; };
@@ -146,6 +152,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		DF82619B217B9F6400114775 /* PageMenu */ = {
+			isa = PBXGroup;
+			children = (
+				DF82619C217B9F7600114775 /* PageMenuViewController.swift */,
+			);
+			path = PageMenu;
+			sourceTree = "<group>";
+		};
 		DF873C30217AC8A500135078 /* storyboard */ = {
 			isa = PBXGroup;
 			children = (
@@ -211,6 +225,7 @@
 		DF97EE03217AC01C00FE7DB3 /* KAWAI */ = {
 			isa = PBXGroup;
 			children = (
+				DF82619B217B9F6400114775 /* PageMenu */,
 				DF873C4F217AF3F800135078 /* list */,
 				DF873C4E217AF3EC00135078 /* model */,
 				DF873C30217AC8A500135078 /* storyboard */,
@@ -266,6 +281,8 @@
 			isa = PBXGroup;
 			children = (
 				DF873C54217AF4AD00135078 /* CheckEmotionViewController.swift */,
+				DF82619E217BAB0A00114775 /* CheckEmotionPresenter.swift */,
+				DF8261A0217BB6B300114775 /* ResultViewController.swift */,
 			);
 			path = checkemotion;
 			sourceTree = "<group>";
@@ -463,6 +480,7 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Hero/Hero.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/PageMenu/PageMenu.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
@@ -471,6 +489,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Hero.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PageMenu.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -524,12 +543,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF82619D217B9F7600114775 /* PageMenuViewController.swift in Sources */,
 				DF873C69217B34C300135078 /* ListCollectionViewCell.swift in Sources */,
 				DF873C65217B344300135078 /* ListPresenter.swift in Sources */,
 				DF873C40217AD00E00135078 /* ApiManager.swift in Sources */,
 				DF873C70217B655400135078 /* ImageListModel.swift in Sources */,
+				DF8261A1217BB6B300114775 /* ResultViewController.swift in Sources */,
 				DF873C51217AF48B00135078 /* Sample.swift in Sources */,
 				DF97EE05217AC01C00FE7DB3 /* AppDelegate.swift in Sources */,
+				DF82619F217BAB0A00114775 /* CheckEmotionPresenter.swift in Sources */,
 				DF873C42217ADB2300135078 /* CreatemodelViewController.swift in Sources */,
 				DF873C46217AE96700135078 /* PreviewPresenter.swift in Sources */,
 				DF873C44217AE74500135078 /* PreviewViewController.swift in Sources */,
@@ -710,6 +732,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = KAWAI/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -733,6 +756,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = KAWAI/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

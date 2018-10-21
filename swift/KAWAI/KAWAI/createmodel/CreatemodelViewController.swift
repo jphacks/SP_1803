@@ -9,6 +9,11 @@
 import UIKit
 import AVFoundation
 
+enum callMode: String {
+    case emotion = "感情"
+    case create = "投稿"
+}
+
 class CreatemodelViewController: UIViewController {
 
     // デバイスからの入力と出力を管理するオブジェクトの作成
@@ -29,9 +34,12 @@ class CreatemodelViewController: UIViewController {
     
     @IBOutlet weak var maskView: UIView!
     
+    @IBOutlet weak var modelabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        modelabel.text = callMode.emotion.rawValue
+        self.maskView.isHidden = true
         setupCaptureSession()
         setupDevice()
         setupInputOutput()
@@ -62,7 +70,17 @@ class CreatemodelViewController: UIViewController {
         // 撮影された画像をdelegateメソッドで処理
         self.photoOutput?.capturePhoto(with: settings, delegate: self as AVCapturePhotoCaptureDelegate)
     }
-
+    
+    @IBAction func callCheckEmotion(_ sender: Any) {
+        modelabel.text = callMode.emotion.rawValue
+        self.maskView.isHidden = true
+    }
+    
+    @IBAction func callCreateModel(_ sender: Any) {
+        modelabel.text = callMode.create.rawValue
+        self.maskView.isHidden = false
+    }
+    
 }
 
 //MARK: AVCapturePhotoCaptureDelegateデリゲートメソッド
@@ -75,9 +93,18 @@ extension CreatemodelViewController: AVCapturePhotoCaptureDelegate{
             // 写真ライブラリに画像を保存
             UIImageWriteToSavedPhotosAlbum(uiImage!, nil,nil,nil)
             
-            let secondViewController = self.storyboard?.instantiateViewController(withIdentifier: "Preview") as! PreviewViewController
-            secondViewController.postImage = uiImage
-            self.present(secondViewController, animated: true, completion: nil)
+            if modelabel.text == callMode.emotion.rawValue {
+                let secondViewController = self.storyboard?.instantiateViewController(withIdentifier: "Emotion") as! CheckEmotionViewController
+                secondViewController.postImage = uiImage
+                self.present(secondViewController, animated: true, completion: nil)
+//                self.navigationController?.pushViewController(secondViewController, animated: true)
+            }else {
+                let secondViewController = self.storyboard?.instantiateViewController(withIdentifier: "Preview") as! PreviewViewController
+                secondViewController.postImage = uiImage
+                self.present(secondViewController, animated: true, completion: nil)
+//                self.navigationController?.pushViewController(secondViewController, animated: true)
+            }
+            
 //            self.navigationController?.pushViewController(secondViewController, animated: true)
         }
     }
@@ -87,7 +114,8 @@ extension CreatemodelViewController: AVCapturePhotoCaptureDelegate{
 extension CreatemodelViewController{
     // カメラの画質の設定
     func setupCaptureSession() {
-        captureSession.sessionPreset = AVCaptureSession.Preset.photo
+//        captureSession.sessionPreset = AVCaptureSession.Preset.photo
+        captureSession.sessionPreset = AVCaptureSession.Preset.iFrame1280x720
     }
     
     // デバイスの設定

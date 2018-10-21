@@ -20,12 +20,12 @@ class ListViewController: UIViewController {
     // cellのmargin
     private let margin: CGFloat = 24.0
     
-    @IBOutlet weak var listNavBar: UINavigationBar!
+//    @IBOutlet weak var listNavBar: UINavigationBar!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 //        ナビゲーションアイテムのタイトルに画像を設定する。
-        listNavBar.topItem?.titleView = UIImageView(image:UIImage(named:"header"))
+//        listNavBar.topItem?.titleView = UIImageView(image:UIImage(named:"header"))
         
         // make UIImageView instance
         var imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: self.collectionView.frame.width, height: self.collectionView.frame.height))
