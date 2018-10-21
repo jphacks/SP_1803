@@ -10,11 +10,21 @@ type Image struct {
 	ImageURL  string
 	EmotionID int
 	Gender    string
+	Good      int
 	CreatedAt time.Time
 }
 
 type ImageOperator struct {
 	Connetion *sql.DB
+}
+
+func (o *ImageOperator) Good(image_id int) error {
+	query := "update images set good = good + 1 where image_id = ?"
+	_, err := o.Connetion.Exec(query, image_id)
+	if err != nil {
+		return err
+	}
+	return nil
 }
 
 func (o *ImageOperator) Insert(image *Image) error {
@@ -44,6 +54,7 @@ func (o *ImageOperator) Select(emo_id string) (*[]Image, error) {
 			&image.Gender,
 			&image.CreatedAt,
 			&image.EmotionID,
+			&image.Good,
 		)
 		if err != nil {
 			return nil, err
