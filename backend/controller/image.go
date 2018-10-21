@@ -24,6 +24,14 @@ type Image struct {
 	Good     int    `json:"good"`
 }
 
+type ImageDetail struct {
+	ImageID   int    `json:"image_id"`
+	ImageURL  string `json:"image_url"`
+	EmotionID int    `json:"emotion_id"`
+	Gender    string `json:"gender"`
+	Good      int    `json:"godd"`
+}
+
 func GoodImage(c *gin.Context) {
 	imageIDString := c.Param("image_id")
 	imageID, err := strconv.Atoi(imageIDString)
@@ -39,6 +47,34 @@ func GoodImage(c *gin.Context) {
 		return
 	}
 	okResponse(c, "done good")
+}
+
+func DetailImage(c *gin.Context) {
+	imageIDString := c.Param("image_id")
+	imageID, err := strconv.Atoi(imageIDString)
+	if err != nil {
+		internalServgerErrorResponse(c, "convert to string int", err)
+		return
+	}
+	imgOpe := &rdb.ImageOperator{
+		Connetion: dbContext.Connection,
+	}
+	images, err := imgOpe.GetOne(imageID)
+	if err != nil {
+		internalServgerErrorResponse(c, "cant good rdb", err)
+		return
+	}
+
+	one := (*images)[0]
+
+	image := ImageDetail{
+		ImageID:   one.ImageID,
+		ImageURL:  one.ImageURL,
+		EmotionID: one.EmotionID,
+		Gender:    one.Gender,
+		Good:      one.Good,
+	}
+	c.JSON(http.StatusOK, image)
 }
 
 func PostImage(c *gin.Context) {
