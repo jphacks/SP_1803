@@ -10,6 +10,10 @@ import Foundation
 import URLQueryBuilder
 import Alamofire
 
+struct testArray: Codable {
+    let data: [testModel]
+}
+
 struct testModel: Codable {
     let category: String
     let probability: Float
@@ -26,6 +30,7 @@ final class CheckEmotionPresenter {
     private var state: loadStatus = .initial
     private weak var view: View?
     var contentsList: [testModel] = []
+    var contentsLista: testArray?
 
 
     private var components = URLComponents()
@@ -68,7 +73,7 @@ final class CheckEmotionPresenter {
     
     func callPostImage(postImage2: UIImage?) {
         postImage(after: { str in
-            self.contentsList = str
+            self.contentsLista = str
             defer {
                 DispatchQueue.main.async {
                     self.view?.reloadFeed()
@@ -134,12 +139,12 @@ final class CheckEmotionPresenter {
         )
     }
 
-    private func postImage(after: @escaping ([testModel]) -> (), postImage: UIImage?) {
+    private func postImage(after: @escaping (testArray) -> (), postImage: UIImage?) {
         guard state != .fetching else { return }
         state = .fetching
 
         components.scheme = "http"
-        components.host = "35.172.133.142"
+        components.host = "192.168.179.7"
         components.port = 5000
 
         print(components.url)
@@ -158,18 +163,18 @@ final class CheckEmotionPresenter {
                 // 送信する値の指定をここでします
                 multipartFormData.append(imageData!, withName: "image", fileName: filename, mimeType: "image/jpeg")
             },
-            to: components.url ?? host,
-            encodingCompletion: { encodingResult in debugPrint(encodingResult)
+            to: components.url!,
+            encodingCompletion: { encodingResult in //debugPrint(encodingResult)
                 switch encodingResult {
                 case .success(let upload, _, _):
                     upload.responseJSON { response in
                         // 成功
                         let responseData = response.data!
-                        debugPrint(responseData)
+//                        debugPrint(responseData)
                         do {
-                            let contents = try JSONDecoder().decode([testModel].self, from: responseData)
+                            let contents = try JSONDecoder().decode(testArray.self, from: responseData)
                             self.state = .success
-                            print(contents)
+//                            print(contents)
                             after(contents)
                         } catch {
                             self.state = .initial

@@ -8,6 +8,38 @@ class TestDraw: UIView {
     var x1 = 100
     var y1 = 100
     
+//    var color_id: Int
+//    var x0: Int
+//    var y0: Int
+//    var x1: Int
+//    var y1: Int
+    
+//    init() {
+//        // 全てのプロパティを初期化する前にインスタンスメソッドを実行することはできない
+//        // printName() → コンパイルエラー
+//        self.color_id = 1
+//        self.x0 = 50
+//        self.y0 = 50
+//        self.x1 = 100
+//        self.y1 = 100
+//
+//    }
+    
+//    override init(frame: CGRect) {
+//        super.init(frame: frame)
+//        // 初期化などをここに記述
+//        self.color_id = 1
+//        self.x0 = 50
+//        self.y0 = 50
+//        self.x1 = 100
+//        self.y1 = 100
+//
+//    }
+//
+//    required init?(coder aDecoder: NSCoder) {
+//        super.init(coder: aDecoder)
+//    }
+    
     // Only override draw() if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.
     override func draw(_ rect: CGRect) {
