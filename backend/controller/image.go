@@ -5,9 +5,14 @@ import (
 	"log"
 	"mime/multipart"
 	"net/http"
+	"time"
 
 	"github.com/gin-gonic/gin"
 	"github.com/jphacks/SP_1803/backend/rdb"
+)
+
+var (
+	loc = time.FixedZone("Asia/Tokyo", 9*60*60)
 )
 
 type Prop struct {
@@ -54,6 +59,23 @@ func PostImage(c *gin.Context) {
 		return
 	}
 	log.Println("url", url)
+
+	imgOpe := rdb.ImageOperator{
+		Connetion: dbContext.Connection,
+	}
+
+	createdTime, err := time.ParseInLocation("2006-01-02 15:04:05", prop.CreatedAt, loc)
+
+	img := rdb.Image{
+		ImageURL:  url,
+		Gender:    prop.Gender,
+		CreatedAt: createdTime,
+		EmotionID: prop.EmotionID,
+	}
+	if err := imgOpe.Insert(&img); err != nil {
+		internalServgerErrorResponse(c, "insert image record", err)
+		return
+	}
 
 	okResponse(c, "done create image file on GCS")
 	return
