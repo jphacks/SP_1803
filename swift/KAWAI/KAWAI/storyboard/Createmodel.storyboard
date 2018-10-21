@@ -178,18 +178,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aa4-H7-5ax">
-                                <rect key="frame" x="16" y="234.66666666666663" width="343" height="343"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="aa4-H7-5ax" secondAttribute="height" multiplier="1:1" id="kr7-vy-4DJ"/>
-                                </constraints>
+                                <rect key="frame" x="16" y="82.333333333333314" width="343" height="647.33333333333348"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e0T-v6-dXd">
-                                <rect key="frame" x="166" y="104" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ryV-v1-jbB">
                                 <rect key="frame" x="15.999999999999996" y="44" width="45.666666666666657" height="30.333333333333329"/>
                                 <constraints>
@@ -209,6 +199,7 @@
                             <constraint firstItem="aa4-H7-5ax" firstAttribute="leading" secondItem="uJh-s9-uNg" secondAttribute="leading" constant="16" id="Xir-uk-zhg"/>
                             <constraint firstItem="uJh-s9-uNg" firstAttribute="trailing" secondItem="ryV-v1-jbB" secondAttribute="trailing" constant="313.32999999999998" id="agD-x2-2tf"/>
                             <constraint firstItem="uJh-s9-uNg" firstAttribute="trailing" secondItem="aa4-H7-5ax" secondAttribute="trailing" constant="16" id="fuB-4h-AXg"/>
+                            <constraint firstItem="aa4-H7-5ax" firstAttribute="top" secondItem="ryV-v1-jbB" secondAttribute="bottom" constant="8" id="lY9-ZO-JnY"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="uJh-s9-uNg"/>
                     </view>
@@ -232,7 +223,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d9M-ws-2MC">
-                                <rect key="frame" x="15.999999999999996" y="39" width="45.666666666666657" height="30"/>
+                                <rect key="frame" x="15.999999999999996" y="39" width="45.666666666666657" height="50"/>
                                 <state key="normal" title="Button" image="btn_back"/>
                                 <connections>
                                     <action selector="backbutton:" destination="1yJ-GF-WCX" eventType="touchUpInside" id="gvc-OU-Ow6"/>
@@ -244,19 +235,19 @@
                                     <constraint firstAttribute="width" secondItem="uBh-iN-ljc" secondAttribute="height" multiplier="2:1" id="PTE-vY-Bkc"/>
                                     <constraint firstAttribute="width" constant="120" id="vZH-Vs-7GN"/>
                                 </constraints>
-                                <state key="normal" title="Button" image="btn_regi_m"/>
+                                <state key="normal" title="Button" image="btn_send_m"/>
                                 <connections>
                                     <action selector="imageUpload:" destination="1yJ-GF-WCX" eventType="touchDragInside" id="lbi-P1-gTp"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hx6-C1-Xdg">
-                                <rect key="frame" x="16" y="97" width="343" height="343"/>
+                                <rect key="frame" x="16" y="117" width="343" height="548.66666666666663"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="hx6-C1-Xdg" secondAttribute="height" multiplier="1:1" id="Wo1-7i-8ix"/>
+                                    <constraint firstAttribute="width" secondItem="hx6-C1-Xdg" secondAttribute="height" multiplier="1:1.6" id="Wo1-7i-8ix"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="label" translatesAutoresizingMaskIntoConstraints="NO" id="tnM-Dx-QD6">
-                                <rect key="frame" x="75.666666666666686" y="44" width="224" height="25"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="label_em" translatesAutoresizingMaskIntoConstraints="NO" id="tnM-Dx-QD6">
+                                <rect key="frame" x="75.666666666666686" y="64" width="224" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="tnM-Dx-QD6" secondAttribute="height" multiplier="224:25" id="54O-RD-x3w"/>
                                     <constraint firstAttribute="width" constant="224" id="Qgv-rr-Mdn"/>
@@ -275,7 +266,7 @@
                             <constraint firstItem="Hyx-UK-IB8" firstAttribute="top" secondItem="WV7-2H-On3" secondAttribute="top" id="cQb-ig-8iN"/>
                             <constraint firstItem="YGy-FG-VfA" firstAttribute="bottom" secondItem="uBh-iN-ljc" secondAttribute="bottom" constant="24" id="ejZ-S4-Xhj"/>
                             <constraint firstItem="tnM-Dx-QD6" firstAttribute="centerX" secondItem="WV7-2H-On3" secondAttribute="centerX" id="gbn-zb-DJE"/>
-                            <constraint firstItem="tnM-Dx-QD6" firstAttribute="top" secondItem="YGy-FG-VfA" secondAttribute="top" id="iZb-q9-6Mn"/>
+                            <constraint firstItem="tnM-Dx-QD6" firstAttribute="top" secondItem="YGy-FG-VfA" secondAttribute="top" constant="20" id="iZb-q9-6Mn"/>
                             <constraint firstItem="YGy-FG-VfA" firstAttribute="trailing" secondItem="Hyx-UK-IB8" secondAttribute="trailing" id="joz-kD-Z1w"/>
                             <constraint firstItem="d9M-ws-2MC" firstAttribute="top" secondItem="WV7-2H-On3" secondAttribute="top" constant="39" id="sEr-U4-S2I"/>
                             <constraint firstItem="hx6-C1-Xdg" firstAttribute="leading" secondItem="YGy-FG-VfA" secondAttribute="leading" constant="16" id="tjJ-o6-fyC"/>
@@ -289,7 +280,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LUc-xz-rAB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="940" y="675"/>
+            <point key="canvasLocation" x="940" y="674.6305418719212"/>
         </scene>
     </scenes>
     <resources>
@@ -297,6 +288,8 @@
         <image name="btn_back" width="138" height="89"/>
         <image name="btn_camera" width="258" height="258"/>
         <image name="btn_regi_m" width="464" height="196"/>
+        <image name="btn_send_m" width="464" height="196"/>
         <image name="label" width="641" height="76"/>
+        <image name="label_em" width="609" height="192"/>
     </resources>
 </document>
