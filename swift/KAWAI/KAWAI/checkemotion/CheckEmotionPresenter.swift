@@ -10,19 +10,22 @@ import Foundation
 import URLQueryBuilder
 import Alamofire
 
-//struct ImageCreateModel: Codable {
-//    let user_id: Int
-//    let emotion_id: Int
-//    let gender: String
-//    let created_at: String
-//}
+struct testModel: Codable {
+    let category: String
+    let probability: Float
+//    let coordinate: [Int]
+    let x1: Int
+    let y1: Int
+    let x2: Int
+    let y2: Int
+}
 
 
 final class CheckEmotionPresenter {
     typealias View = CheckEmotionProtocol & CheckEmotionViewController
     private var state: loadStatus = .initial
     private weak var view: View?
-    private var contentsList: [ImageCreateModel] = []
+    var contentsList: [testModel] = []
 
 
     private var components = URLComponents()
@@ -36,41 +39,41 @@ final class CheckEmotionPresenter {
         self.view = view
     }
 
-    func sample(at index: Int) -> ImageCreateModel? {
+    func sample(at index: Int) -> testModel? {
         guard index < contentsList.count else { return nil }
         return contentsList[index]
     }
 
-    func callGetSample() {
-        defer {
-            DispatchQueue.main.async {
-                self.view?.reloadFeed()
-            }
-        }
-        getSample(after: { str in
-            self.contentsList = str
-        })
-    }
-
-    func callPostSample() {
-        defer {
-            DispatchQueue.main.async {
-                self.view?.reloadFeed()
-            }
-        }
-        postSample(after: { str in
-            self.contentsList = str
-        }, body: "hoge")
-    }
+//    func callGetSample() {
+//        defer {
+//            DispatchQueue.main.async {
+//                self.view?.reloadFeed()
+//            }
+//        }
+//        getSample(after: { str in
+//            self.contentsList = str
+//        })
+//    }
+//
+//    func callPostSample() {
+//        defer {
+//            DispatchQueue.main.async {
+//                self.view?.reloadFeed()
+//            }
+//        }
+//        postSample(after: { str in
+//            self.contentsList = str
+//        }, body: "hoge")
+//    }
     
     func callPostImage(postImage2: UIImage?) {
-        defer {
-            DispatchQueue.main.async {
-                self.view?.reloadFeed()
-            }
-        }
         postImage(after: { str in
             self.contentsList = str
+            defer {
+                DispatchQueue.main.async {
+                    self.view?.reloadFeed()
+                }
+            }
         }, postImage: postImage2)
         
     }
@@ -131,7 +134,7 @@ final class CheckEmotionPresenter {
         )
     }
 
-    private func postImage(after: @escaping ([ImageCreateModel]) -> (), postImage: UIImage?) {
+    private func postImage(after: @escaping ([testModel]) -> (), postImage: UIImage?) {
         guard state != .fetching else { return }
         state = .fetching
 
@@ -148,23 +151,23 @@ final class CheckEmotionPresenter {
         let filename = formatter.string(from: Date()) + String(id) + ".png"
 
         // pngへ変換
-        let imageData = postImage?.pngData()
+        let imageData = postImage?.jpegData(compressionQuality: 1.0)
 
         Alamofire.upload(
             multipartFormData: { multipartFormData in
                 // 送信する値の指定をここでします
-                multipartFormData.append(imageData!, withName: "image", fileName: filename, mimeType: "image/png")
+                multipartFormData.append(imageData!, withName: "image", fileName: filename, mimeType: "image/jpeg")
             },
             to: components.url ?? host,
-            encodingCompletion: { encodingResult in //debugPrint(encodingResult)
+            encodingCompletion: { encodingResult in debugPrint(encodingResult)
                 switch encodingResult {
                 case .success(let upload, _, _):
                     upload.responseJSON { response in
                         // 成功
                         let responseData = response.data!
-                        debugPrint(response)
+                        debugPrint(responseData)
                         do {
-                            let contents = try JSONDecoder().decode([ImageCreateModel].self, from: responseData)
+                            let contents = try JSONDecoder().decode([testModel].self, from: responseData)
                             self.state = .success
                             print(contents)
                             after(contents)

@@ -64,13 +64,13 @@ class CheckEmotionViewController: UIViewController {
             // アニメーション開始
             self.indicator.startAnimating()
             
-            let secondViewController = self.storyboard?.instantiateViewController(withIdentifier: "Result") as! ResultViewController
-            secondViewController.postImage = self.postImage!
-            // 5秒後に実行
-            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + .seconds(5)) {
-                self.indicator.stopAnimating()
-                self.present(secondViewController, animated: true, completion: nil)
-            }
+//            let secondViewController = self.storyboard?.instantiateViewController(withIdentifier: "Result") as! ResultViewController
+//            secondViewController.postImage = self.postImage!
+//            // 5秒後に実行
+//            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + .seconds(5)) {
+//                self.indicator.stopAnimating()
+//                self.present(secondViewController, animated: true, completion: nil)
+//            }
             
         })
         // キャンセルボタン
@@ -98,7 +98,14 @@ extension CheckEmotionViewController: CheckEmotionProtocol {
     
     func reloadFeed() {
         self.indicator.stopAnimating()
-        print("hoge")
+        debugPrint(self.presenter.numberOfSampleModel)
+        
+        let secondViewController = self.storyboard?.instantiateViewController(withIdentifier: "Result") as! ResultViewController
+        secondViewController.postImage = self.postImage!
+//        secondViewController.clipData = self.presenter.contentsList
+        
+        self.present(secondViewController, animated: true, completion: nil)
+        
     }
     
 }
