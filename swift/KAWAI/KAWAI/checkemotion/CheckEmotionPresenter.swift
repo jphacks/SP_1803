@@ -1,8 +1,8 @@
 //
-//  PreviewPresenter.swift
+//  CheckEmotionPresenter.swift
 //  KAWAI
 //
-//  Created by 横山新 on 2018/10/20.
+//  Created by 横山新 on 2018/10/21.
 //  Copyright © 2018年 恵庭艦隊トシキング. All rights reserved.
 //
 
@@ -10,37 +10,37 @@ import Foundation
 import URLQueryBuilder
 import Alamofire
 
-struct ImageCreateModel: Codable {
-    let user_id: Int
-    let emotion_id: Int
-    let gender: String
-    let created_at: String
-}
+//struct ImageCreateModel: Codable {
+//    let user_id: Int
+//    let emotion_id: Int
+//    let gender: String
+//    let created_at: String
+//}
 
 
-final class PreviewPresenter {
-    typealias View = PreviewProtocol & PreviewViewController
+final class CheckEmotionPresenter {
+    typealias View = CheckEmotionProtocol & CheckEmotionViewController
     private var state: loadStatus = .initial
     private weak var view: View?
     private var contentsList: [ImageCreateModel] = []
-    
-    
+
+
     private var components = URLComponents()
     private let host = "http://35.221.98.97"
-    
+
     var numberOfSampleModel: Int {
         return contentsList.count
     }
-    
+
     init(view: View) {
         self.view = view
     }
-    
+
     func sample(at index: Int) -> ImageCreateModel? {
         guard index < contentsList.count else { return nil }
         return contentsList[index]
     }
-    
+
     func callGetSample() {
         defer {
             DispatchQueue.main.async {
@@ -51,7 +51,7 @@ final class PreviewPresenter {
             self.contentsList = str
         })
     }
-    
+
     func callPostSample() {
         defer {
             DispatchQueue.main.async {
@@ -60,16 +60,28 @@ final class PreviewPresenter {
         }
         postSample(after: { str in
             self.contentsList = str
-        },body: "hoge")
+        }, body: "hoge")
     }
     
-    
+    func callPostImage(postImage2: UIImage?) {
+        defer {
+            DispatchQueue.main.async {
+                self.view?.reloadFeed()
+            }
+        }
+        postImage(after: { str in
+            self.contentsList = str
+        }, postImage: postImage2)
+        
+    }
+
+
     private func getSample(after: @escaping ([ImageCreateModel]) -> Void) {
         guard state != .fetching else { return }
         state = .fetching
         let someDictionary: [String: Any] = ["name": "bob"]
         let queryBuilder: URLQueryBuilder = URLQueryBuilder(dictionary: someDictionary)
-        let api = ApiManager(path: "/get",queryString: queryBuilder.build())
+        let api = ApiManager(path: "/get", queryString: queryBuilder.build())
         api.request(
             success: {
                 (data: Data) in
@@ -81,15 +93,15 @@ final class PreviewPresenter {
                 } catch {
                     self.state = .initial
                 }
-        },
+            },
             fail: {
                 (error: Error?) in print(error)
-                
-        }
+
+            }
         )
-        
+
     }
-    
+
     private func postSample(after: @escaping ([ImageCreateModel]) -> (), body: String) {
         guard state != .fetching else { return }
         state = .fetching
@@ -110,65 +122,64 @@ final class PreviewPresenter {
                     self.state = .initial
                     print(error)
                 }
-                
-        },
+
+            },
             fail: {
                 (error: Error?) in print(error)
-                
-        }
+
+            }
         )
     }
-    
-    func postImage(postImage: UIImage?, emotion_id: Int) {
-        
+
+    private func postImage(after: @escaping ([ImageCreateModel]) -> (), postImage: UIImage?) {
+        guard state != .fetching else { return }
+        state = .fetching
+
         components.scheme = "http"
-        components.host = "35.221.98.97"
-        components.path = "/images"
-        components.port = 8080
-        
+        components.host = "35.172.133.142"
+        components.port = 5000
+
         print(components.url)
         // 現在時刻を取得
         let formatter = DateFormatter()
-        formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
-        let displayTime = formatter.string(from: Date())
         // タイムスタンプによる被りを避けるために，ランダムで生成
         let id = String(Int.random(in: 0 ... 100))
         formatter.dateFormat = "yyyy-MM-dd-HH-mm-ss"
         let filename = formatter.string(from: Date()) + String(id) + ".png"
-        
+
         // pngへ変換
         let imageData = postImage?.pngData()
-        
-        // 送るmodel
-        let record = ImageCreateModel(user_id: 0, emotion_id: emotion_id + 1, gender: "male", created_at: displayTime)
-        
+
         Alamofire.upload(
             multipartFormData: { multipartFormData in
                 // 送信する値の指定をここでします
-                let encoder = JSONEncoder()
-                do {
-                    let data = try encoder.encode(record)
-                    multipartFormData.append(data, withName: "prop", mimeType: "application/json")
-                } catch {
-                    print(error.localizedDescription)
-                }
                 multipartFormData.append(imageData!, withName: "image", fileName: filename, mimeType: "image/png")
-        },
+            },
             to: components.url ?? host,
             encodingCompletion: { encodingResult in //debugPrint(encodingResult)
                 switch encodingResult {
                 case .success(let upload, _, _):
                     upload.responseJSON { response in
                         // 成功
-                        let responseData = response
-                        print(responseData)
+                        let responseData = response.data!
+                        debugPrint(response)
+                        do {
+                            let contents = try JSONDecoder().decode([ImageCreateModel].self, from: responseData)
+                            self.state = .success
+                            print(contents)
+                            after(contents)
+                        } catch {
+                            self.state = .initial
+                            print(error)
+                        }
                     }
                 case .failure(let encodingError):
                     // 失敗
                     print(encodingError)
                 }
-        }
+            }
         )
     }
-    
+
 }
+
