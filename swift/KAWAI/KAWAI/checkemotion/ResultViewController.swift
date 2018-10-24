@@ -8,6 +8,17 @@
 
 import UIKit
 
+enum BOBOB {
+    case cute_m
+    case cute_w
+    case disgusting_m
+    case disgusting_2
+    case good_m
+    case good_w
+    case interesting_m
+    case interesting_w
+}
+
 class ResultViewController: UIViewController {
     
     @IBOutlet weak var ImageView: UIImageView!
@@ -32,7 +43,35 @@ class ResultViewController: UIViewController {
             self.view.addSubview(bobViewa)
             
             let label = UILabel()
-            label.text = "かわいい"
+            
+            if element.category == "cute_m" {
+                label.text = "男 かわいい"
+                
+            }else if element.category == "cute_w" {
+                label.text = "女 かわいい"
+                
+            }else if element.category == "disgusting_m" {
+                label.text = "男 キモい"
+                
+            }else if element.category == "disgusting_w" {
+                label.text = "女 キモい"
+                
+            }else if element.category == "good_m" {
+                label.text = "男 かっこいい"
+                
+            }else if element.category == "good_w" {
+                label.text = "女 かっこいい"
+                
+            }else if element.category == "interesting_m" {
+                label.text = "男 おもしろい"
+                
+            }else {
+                label.text = "女 おもしろい"
+                
+            }
+    
+            
+//            label.text = "かわいい"
             label.textColor = UIColor.magenta
             
             label.frame = CGRect(x: element.x1/7 + frameX, y: element.y1/7 + frameY - 20, width: (element.x2 - element.x1)/7, height: (element.y2 - element.y1)/7)
